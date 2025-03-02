@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>DRAGON</h2>
+            <ul>
+                <li><span>Directed by:</span> A.R. Murugadoss</li>
+                <li><span>Starring:</span> Suriya, Nayanthara, Prakash Raj, Yogi Babu</li>
+                <li><span>Music by:</span> Anirudh Ravichander</li>
+                <li><span>Release date:</span> 2025</li>
+                <li><span>Language:</span> Tamil</li>
+                <li><span>Box office:</span> Blockbuster</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Dragon+Tamil+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.netflix.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="Dragon.webp" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        <strong>Dragon</strong> is an epic fantasy action film set in ancient Tamil Nadu, revolving around Arjun (Suriya), a fearless warrior destined to protect his kingdom from a mythical dragon. 
+        When an ancient prophecy threatens his homeland, Arjun embarks on a perilous journey to discover the secrets of the Dragon and its mystical powers. 
+        Guided by Vaani (Nayanthara), a wise sorceress with hidden motives, Arjun faces treacherous enemies, dark magic, and his inner demons. 
+        The narrative unfolds with breathtaking action sequences, intense drama, and a powerful clash between good and evil. 
+        Dragon is a tale of bravery, sacrifice, and the triumph of hope against darkness.
+    </p>
+
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        <strong>Suriya</strong> portrays Arjun, showcasing his charisma and versatility as a fearless warrior with a tragic past. 
+        <strong>Nayanthara</strong> delivers a compelling performance as Vaani, balancing strength and mystery in her character. 
+        <strong>Prakash Raj</strong> is captivating as the antagonist King Veerabhadra, exuding power and ruthlessness. 
+        <strong>Yogi Babu</strong> adds humor as Arjun’s loyal companion, bringing light-hearted moments amidst the intense narrative. 
+        The ensemble cast, with their stellar performances, enriches the emotional depth and grandeur of the story.
+    </p>
+
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        <strong>Directed by A.R. Murugadoss</strong>, Dragon combines fantasy elements with historical drama, creating a visually spectacular cinematic experience. 
+        The screenplay masterfully weaves action, adventure, and emotional storytelling. 
+        Produced by Sun Pictures, the film is made on a grand scale with high-end visual effects, capturing the mythical world of dragons and magic. 
+        The breathtaking set designs and intricate costumes enhance the authenticity of the historical period.
+    </p>
+
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Filmed across exotic locations in India and New Zealand, Dragon showcases mesmerizing landscapes and ancient architectures. 
+        The battle sequences are choreographed with high-octane stunts and intense fight scenes, displaying Suriya's action prowess. 
+        The visually stunning dragon scenes are created using state-of-the-art CGI and VFX technology, delivering an immersive cinematic experience.
+    </p>
+
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        Dragon explores themes of courage, destiny, and sacrifice. It delves into the age-old battle between good and evil, with moral dilemmas and emotional conflicts. 
+        The narrative reflects the hero’s journey of self-discovery and redemption, influenced by Tamil folklore and ancient mythology. 
+        The film emphasizes the power of hope, love, and faith in overcoming darkness, resonating with audiences through its universal themes and cultural depth.
+    </p>
+
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        <strong>Composed by Anirudh Ravichander</strong>, the music of Dragon is an emotional rollercoaster, blending traditional folk tunes with epic orchestral themes. 
+        The soundtrack features powerful songs like <em>"Veera Thaagam"</em> and <em>"Uyir Thandha Kural"</em>, capturing the emotional essence of the narrative. 
+        The background score heightens the dramatic tension and grandeur of action sequences, complementing the mythical and adventurous ambiance of the film.
+    </p>
+
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        Released in <strong>2025</strong>, Dragon received critical acclaim for its gripping narrative, spectacular visuals, and outstanding performances. 
+        The movie became a blockbuster at the box office, resonating with audiences of all ages. 
+        Praised for its innovative storytelling and breathtaking CGI, Dragon redefined the fantasy genre in Tamil cinema. 
+        It continues to inspire fans with its epic saga of heroism, magic, and destiny, solidifying its place as a modern cinematic masterpiece.
+    </p>
+</div>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>ANBE SIVAM</h2>
+            <ul>
+                <li><span>Directed by:</span> Sundar C.</li>
+                <li><span>Starring:</span> Kamal Haasan, R. Madhavan, Kiran Rathod, Nassar, Santhana Bharathi</li>
+                <li><span>Music by:</span> Vidyasagar</li>
+                <li><span>Release date:</span> 2003</li>
+                <li><span>Language:</span> Tamil</li>
+                <li><span>Box office:</span> Cult Classic with Critical Acclaim</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Anbe+Sivam+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="anbe_sivam.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Anbe Sivam is a philosophical road movie that follows the journey of Nallasivam (Kamal Haasan), a communist and artist, and Anbarasu (R. Madhavan), an ad filmmaker, as they travel together from Bhubaneswar to Chennai. 
+        The narrative explores the bond they develop despite their ideological differences. 
+        Through flashbacks, the film reveals Nallasivam's past as a revolutionary who was disfigured in an accident and his unfulfilled love story with Bala (Kiran Rathod). 
+        The movie delves into the themes of love, compassion, and the essence of divinity, making it a deeply emotional and thought-provoking film.
+    </p>
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        Kamal Haasan delivers a powerful performance as Nallasivam, portraying the character's humor, wisdom, and emotional depth with brilliance. 
+        R. Madhavan plays Anbarasu, showcasing his transformation from a materialistic ad filmmaker to a compassionate human being. 
+        Kiran Rathod plays Bala, Nallasivam’s love interest. 
+        Nassar and Santhana Bharathi play crucial supporting roles, adding to the narrative’s emotional depth. 
+        The strong performances from the cast elevate the film’s philosophical undertones.
+    </p>
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        Directed by Sundar C., Anbe Sivam was scripted by Kamal Haasan, who infused it with philosophical and social commentary. 
+        The film was produced on a grand scale with impressive cinematography that captured the picturesque landscapes and realistic settings. 
+        Despite being ahead of its time and facing initial commercial setbacks, the movie gained a cult following for its deep narrative and impactful dialogues.
+    </p>
+    
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Filmed in locations across Bhubaneswar, Hyderabad, and Chennai, Anbe Sivam showcases beautiful landscapes that complement the road movie narrative. 
+        The realistic depiction of travel hardships adds authenticity to the storytelling. 
+        The special makeup effects used to create Nallasivam's disfigured look were meticulously crafted, highlighting Kamal Haasan’s dedication to his role.
+    </p>
+    
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        Anbe Sivam explores profound themes of humanism, atheism, love, compassion, and the existence of God. 
+        The movie's central philosophy revolves around the idea that "Love is God" (Anbe Sivam). 
+        It questions religious dogmas and presents a humanistic perspective on divinity. 
+        Influenced by Kamal Haasan’s own philosophical views, the film resonates with universal values of empathy, acceptance, and the power of love.
+    </p>
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        Composed by Vidyasagar, the soundtrack of Anbe Sivam beautifully complements the narrative’s emotional depth. 
+        Songs like "Anbe Sivam" and "Poo Vasam" became timeless classics. 
+        The background score enhances the film’s poignant moments and philosophical dialogues, adding a soulful dimension to the viewing experience.
+    </p>
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        Released in 2003, Anbe Sivam received critical acclaim for its thought-provoking narrative, powerful performances, and philosophical depth. 
+        Although it faced commercial challenges during its initial release, the movie gained a cult status over the years. 
+        It is now celebrated as one of Tamil cinema’s finest masterpieces, influencing numerous filmmakers and audiences with its timeless message of love and humanity.
+    </p>
+</div>

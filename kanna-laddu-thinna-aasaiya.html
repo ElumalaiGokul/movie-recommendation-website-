@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - KANNA LADDU THINNA AASAIYA</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 480px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>KANNA LADDU THINNA AASAIYA</h2>
+        <ul>
+          <li><span>Directed by:</span> Manikandan</li>
+          <li><span>Produced by:</span> Santhanam, Rama Narayanan</li>
+          <li><span>Starring:</span> Santhanam, Powerstar Srinivasan, Sethu, Vishakha Singh</li>
+          <li><span>Music by:</span> Thaman S</li>
+          <li><span>Release date:</span> 13 January 2013</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹30 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Kanna+Laddu+Thinna+Aasaiya+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="kanna_laddu_thinna_aasaiya.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Kanna Laddu Thinna Aasaiya is a light-hearted comedy about three close friends, Shiva, Power, and Kunninam, who all fall for the same girl, Sowmya, after she moves into their neighborhood. 
+        Determined to win her heart, they individually try to impress her using exaggerated and humorous tactics, leading to a series of laugh-out-loud moments. 
+        Their attempts create chaotic yet hilarious situations, with each one trying to outdo the other, resulting in misunderstandings and comic rivalries. 
+        Inspired by the classic film "Indru Poi Naalai Vaa," this movie reimagines the storyline with modern humor, witty dialogues, and slapstick comedy. 
+        It not only pays homage to the original but also stands out for its unique narrative style and impeccable comic timing, making it a memorable entertainer for all ages.
+      </p>
+  
+      <h2 id="cast" class="section-title">Cast</h2>
+      <p>
+        Santhanam delivers a standout performance with his impeccable comic timing and sarcastic humor, effortlessly becoming the heart of the movie's comedy. 
+        Powerstar Srinivasan's quirky mannerisms and over-the-top expressions add an extra layer of humor, making his character unforgettable. 
+        Sethu, on the other hand, brings a relatable charm to the trio, balancing the exaggerated comedy with his subtle performance. 
+        Vishakha Singh plays the role of the love interest with elegance and grace, adding a refreshing presence amidst the comic chaos. 
+        Her character is portrayed with intelligence and independence, avoiding typical clichés, thus complementing the humor with her natural charm. 
+        The chemistry among the lead actors enhances the comic timing, ensuring that the laughter never stops throughout the movie.
+      </p>
+  
+      <h2 id="production" class="section-title">Production</h2>
+      <p>
+        Directed by Manikandan and produced by Santhanam and Rama Narayanan, Kanna Laddu Thinna Aasaiya was crafted with the intent of bringing back vintage humor in a contemporary setting. 
+        The movie was produced on a moderate budget but cleverly utilized its resources, focusing on a witty screenplay and humorous dialogues. 
+        Despite its simple production design, the film's engaging narrative and comic sequences managed to capture the audience's attention. 
+        Santhanam's involvement as a producer was strategic, ensuring the humor remained authentic and relatable. 
+        The team's dedication to maintaining a light-hearted and entertaining atmosphere is evident in every scene, making the film a commercial success and a fan favorite.
+      </p>
+  
+      <h2 id="music" class="section-title">Music</h2>
+      <p>
+        Thaman S composed a vibrant and peppy soundtrack that perfectly matched the movie's energetic and playful tone. 
+        The songs were crafted to blend seamlessly with the comic sequences, enhancing the humor while being catchy enough to stay with the audience. 
+        Tracks like "Love Letter" and "Aathichudi" became instant hits, with their foot-tapping beats and fun lyrics, becoming popular among youngsters. 
+        The background score also played a crucial role in elevating the comedy, using playful tunes to emphasize humorous moments effectively. 
+        By combining modern beats with traditional influences, Thaman S created a musical experience that not only entertained but also amplified the movie's joyful and lively vibe.
+      </p>
+  
+      <h2 id="release" class="section-title">Release</h2>
+      <p>
+        Released during the festive Pongal season in January 2013, Kanna Laddu Thinna Aasaiya attracted audiences of all age groups with its light-hearted humor and relatable characters. 
+        The movie received positive reviews for its refreshing take on comedy and was praised for its ensemble cast's performances, particularly Santhanam and Powerstar Srinivasan. 
+        Its timing during the holiday season helped it gain massive traction at the box office, becoming one of the year's commercial hits. 
+        The film's dialogues and comic sequences became widely popular, sparking social media trends and memes. 
+        Its success not only solidified Santhanam's reputation as a leading comedian but also opened doors for more comedy-centric films in Tamil cinema. 
+        Even years after its release, Kanna Laddu Thinna Aasaiya continues to be remembered as a feel-good entertainer, celebrated for its humor and nostalgia.
+      </p>
+  
+  </div>
+</body>
+</html>

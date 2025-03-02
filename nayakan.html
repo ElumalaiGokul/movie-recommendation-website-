@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - Nayakan</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 480px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>Nayakan</h2>
+        <ul>
+          <li><span>Directed by:</span> Mani Ratnam</li>
+          <li><span>Starring:</span> Kamal Haasan, Saranya Ponvannan, Janagaraj</li>
+          <li><span>Music by:</span> Ilaiyaraaja</li>
+          <li><span>Release date:</span> 21 October 1987</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹25 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Nayakan+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.primevideo.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="nayakan.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Nayakan follows the life of Velu Naicker, a young boy who flees to Bombay after avenging his father's murder. As he grows up, he rises to power in the underworld, becoming a respected don who fights for justice for the oppressed. However, his choices come with a price, leading to a life of moral conflict and tragedy.
+        <br><br>
+        The film delves into Velu's internal struggle as he balances his role as a protector of the poor with his identity as a feared crime lord. His journey is marked by love, loss, betrayal, and redemption, making Nayakan a powerful exploration of power and morality. Through his complex relationships with his wife, children, and trusted allies, Velu's story reflects the harsh realities of crime and justice.
+        <br><br>
+        Nayakan's narrative structure is inspired by The Godfather, but it stands out with its uniquely Indian context and emotional depth. The film's portrayal of Velu's rise and fall is both compelling and heartbreaking, resonating with audiences across generations.
+      </p>
+      
+      <h2 id="cast" class="section-title">Cast</h2>
+      <p>
+        Kamal Haasan delivers a powerful performance as Velu Naicker, earning critical acclaim and a National Award. His portrayal beautifully captures the character's transformation from a vulnerable boy to a formidable don, showcasing his emotional depth and versatility.
+        <br><br>
+        Saranya Ponvannan and Janagaraj add emotional depth, with Saranya playing Velu's conflicted wife who questions his moral choices, and Janagaraj bringing warmth and humor as his loyal confidant. The supporting cast, including Nizhalgal Ravi and Delhi Ganesh, bring authenticity to this epic crime drama.
+        <br><br>
+        Each character is meticulously crafted, contributing to the film's emotional resonance and narrative complexity. The ensemble's remarkable performances make Nayakan an unforgettable cinematic experience.
+      </p>
+      
+      <h2 id="production" class="section-title">Production</h2>
+      <p>
+        Directed by Mani Ratnam and inspired by real-life don Varadarajan Mudaliar, Nayakan is known for its realistic portrayal of Bombay's underworld. The film's screenplay brilliantly balances crime, politics, and personal drama, creating a multi-layered narrative.
+        <br><br>
+        Cinematography by P. C. Sreeram enhances the movie's impact, capturing the gritty atmosphere of Bombay's slums with innovative lighting and camera techniques. The film's attention to detail, from authentic set designs to period-accurate costumes, adds to its immersive storytelling.
+        <br><br>
+        Mani Ratnam's visionary direction, combined with Balakumaran's powerful dialogues, creates a thought-provoking exploration of justice, loyalty, and power. Nayakan set new standards for Indian cinema and remains a benchmark for realistic storytelling.
+      </p>
+      
+      <h2 id="music" class="section-title">Music</h2>
+      <p>
+        Ilaiyaraaja's haunting score and memorable songs became timeless classics, perfectly complementing the movie's intense narrative and emotional moments. The background score heightens the drama, adding emotional depth to key scenes.
+        <br><br>
+        Songs like "Thenpandi Cheemayile" and "Nee Oru Kadhal Sangeetham" resonate with the audience, reflecting Velu's emotional journey. Ilaiyaraaja's orchestration masterfully blends traditional Indian music with Western influences, creating a captivating soundscape.
+        <br><br>
+        The music's emotional resonance continues to inspire generations, making Nayakan's soundtrack an iconic masterpiece in Indian cinema history.
+      </p>
+      
+      <h2 id="release" class="section-title">Release</h2>
+      <p>
+        Released on 21 October 1987, Nayakan became a milestone in Indian cinema, celebrated for its storytelling and powerful performances. The film received widespread critical acclaim and commercial success, solidifying its status as a classic.
+        <br><br>
+        It won three National Film Awards, including Best Actor for Kamal Haasan and Best Cinematography for P. C. Sreeram. Nayakan was also India's official entry for the Best Foreign Language Film at the 1988 Academy Awards, gaining international recognition.
+        <br><br>
+        Decades after its release, Nayakan remains an iconic masterpiece, revered for its emotional depth, complex characters, and realistic portrayal of society. Its influence on Indian cinema is profound, inspiring filmmakers and audiences worldwide.
+      </p>
+      
+  </div>
+</body>
+</html>

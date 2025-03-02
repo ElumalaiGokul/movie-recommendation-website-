@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - MOUNA RAGAM</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 480px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>MOUNA RAGAM</h2>
+        <ul>
+          <li><span>Directed by:</span> Mani Ratnam</li>
+          <li><span>Produced by:</span> G. Venkateswaran</li>
+          <li><span>Starring:</span> Mohan, Revathi, Karthik</li>
+          <li><span>Music by:</span> Ilaiyaraaja</li>
+          <li><span>Release date:</span> 15 August 1986</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> Highly Successful</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Mouna+Ragam+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.primevideo.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="mounaragam.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>  
+      <em>Mouna Ragam</em> explores the emotional journey of Divya, a spirited young woman who struggles to reconcile her past love with her present marriage. Forced into an arranged marriage with Chandrakumar, she initially resists his affection, haunted by memories of her first love, Manohar, who was killed in a tragic incident. Torn between her past and present, Divya's internal conflict is portrayed with subtlety and realism. The narrative beautifully delves into her emotional turmoil, showcasing her resistance, vulnerability, and gradual acceptance of her new life. As she begins to understand Chandrakumar's compassion and patience, her resentment slowly transforms into respect and affection. The film sensitively portrays the complexities of love, loss, and acceptance, making it a timeless exploration of human emotions. Its realistic approach and relatable characters resonate with audiences, offering a poignant reflection on the nature of relationships and the journey toward emotional healing.  
+    </p>  
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>  
+      <em>Mouna Ragam</em> boasts powerful performances from its lead actors. Revathi shines as Divya, delivering a nuanced portrayal of a woman torn between her past and present. Her expressive eyes and subtle gestures capture Divya's emotional turmoil and resilience, making her character relatable and endearing. Mohan, as Chandrakumar, brings depth and sensitivity to his role, effectively conveying his character's patience and understanding as he navigates his wife's emotional struggles. His understated performance adds to the film's realism. Karthik's portrayal of Manohar is charismatic and charming, infusing energy and spontaneity into the narrative. His lively persona and romantic idealism contrast with Chandrakumar's composed nature, emphasizing Divya's emotional dilemma. The supporting cast also delivers memorable performances, contributing to the film's authenticity and emotional impact. The impeccable chemistry between the actors enhances the storytelling, making the characters unforgettable.  
+    </p>  
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>  
+      Directed by the visionary Mani Ratnam, <em>Mouna Ragam</em> is celebrated for its realistic storytelling and innovative narrative style. The film marked a new wave in Tamil cinema, introducing modern narrative techniques and complex characterizations. Mani Ratnam's subtle direction, combined with his keen understanding of human emotions, results in a deeply moving and relatable story. The film's cinematography, by P. C. Sreeram, is breathtaking, capturing the mood and emotions of the characters with elegance. The use of light and shadow enhances the narrative's emotional depth, adding a poetic quality to the visual storytelling. The realistic depiction of urban settings and middle-class life resonates with audiences, creating an authentic atmosphere. The dialogues are natural and impactful, reflecting the characters' emotional states without melodrama. Mani Ratnam's brilliant screenplay, combined with his sensitive direction, revolutionized Tamil cinema, making <em>Mouna Ragam</em> a trendsetter and a timeless classic.  
+    </p>  
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>  
+      Composed by the legendary Ilaiyaraaja, <em>Mouna Ragam</em>'s soundtrack is iconic, featuring evergreen hits like "Nilaave Vaa," "Mandram Vandha," and "Panivizhum Malar Vanam." The soulful melodies beautifully complement the film's emotional depth, enhancing the narrative's impact. Ilaiyaraaja's masterful orchestration and poetic lyrics capture the essence of the characters' emotional journeys, making the songs an integral part of the storytelling. The background score is equally mesmerizing, subtly accentuating the mood and tension in key scenes. Each track is meticulously composed, reflecting the narrative's emotional nuances. The music's timeless appeal has made it a favorite among audiences for generations, contributing significantly to the film's cult status. The seamless integration of songs with the narrative flow enhances the storytelling, making <em>Mouna Ragam</em> a musical masterpiece.  
+    </p>  
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>  
+      Released on 15 August 1986, <em>Mouna Ragam</em> became a cult classic, receiving critical acclaim for its innovative narrative style, realistic portrayal of relationships, and memorable music. It was a commercial success and is considered one of Mani Ratnam's finest works. The film redefined Tamil cinema by introducing modern storytelling techniques and complex characterizations, influencing future filmmakers. Its relatable narrative and powerful performances resonated with audiences across generations, ensuring its enduring popularity. <em>Mouna Ragam</em> was a turning point in Tamil cinema, inspiring a new wave of realistic romantic dramas. It also received several awards, including the National Film Award for Best Feature Film in Tamil, cementing its place as a landmark in Indian cinema. Even decades after its release, the film continues to be celebrated for its timeless storytelling and emotional depth, solidifying its status as a classic.  
+    </p>  
+    
+  </div>
+</body>
+</html>

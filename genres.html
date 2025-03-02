@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keen Cinema</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lora', serif;
+            background-color: #000000d5;
+            color: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            padding: 15px 30px;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            font-family: 'Poppins', sans-serif;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 18px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .line {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+        .menu-label {
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .menu-label:hover {
+            color: #000000;
+        }
+
+        .home-button {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin-right: 10px;
+    }
+    .home-button:hover {
+        background-color:#ff5722;
+        color: #ffffff;
+        transform: scale(1.05);
+    }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 30px;
+            background-color: rgba(54, 53, 53, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ff5722;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+
+        /* Genre buttons */
+        .genre {
+            font-size: 15px;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+            border: 1px solid #ddd;
+            border-radius: 14px; /* Remove rounded corners */
+            cursor: pointer;
+        }
+
+        .genre:hover {
+            background-color:#ff5722;
+            color: #ffffff;
+        }
+
+        /* Center aligned genre buttons horizontally */
+        nav.text-center {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Center the movie cards */
+        #movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0px;
+            margin-top: 20px;
+        }
+
+        .movie-card {
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            margin: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 320px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            padding-bottom: 20px; /* Add padding at the bottom for spacing */
+        }
+
+        .movie-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .movie-card .overlay {
+            position: absolute;
+            top: 175px; /* Move the content down slightly */
+            left: 0;
+            width: 100%;
+            padding: 0 20px; /* Adjust the padding */
+            background: transparent; /* Remove the background layer */
+            color: #fff;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card .overlay h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        .movie-card .overlay p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #ddd;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        /* New CSS for movie description below image */
+        .movie-card .movie-description {
+            padding: 15px;
+            background-color: #fff;
+            font-family: 'Lora', serif;
+            color: #333;
+            font-size: 14px;
+            text-align: left;
+            display: block;
+            border-top: 1px solid #ddd; /* Optional: add a subtle divider between title and description */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for separation */
+            border-radius: 0 0 14px 14px; /* Rounded corners at the bottom */
+        }
+
+        /* Genre title styling */
+        .genre-title {
+            font-size: 36px;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            text-align: center;
+            margin-top: 30px;
+        }
+        /* View Details Button Styles */
+/* Updated View Details Button Styles */
+.view-details {
+    background-color: #ffffff;
+    color: #ff5722;
+    border: 1px solid #ff5722;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.view-details:hover {
+    background-color: #ff5722;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  font-size: 14px;
+  font-family: Arial, sans-serif; /* Simple and clean font */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up full height */
+}
+
+main {
+  flex: 1; /* Pushes the footer to the bottom if content is short */
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            Keen Cinema
+        </div>
+        <div class="menu-container">
+            <button class="home-button" onclick="window.location.href='index.html'">Home</button>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="dropdownMenu" class="dropdown-menu">
+                <a href="trendingmovies.html">Trending Movies</a>
+                <a href="mostpop.html"> Most Popular Movies</a>
+                <a href="topmovies.html">Top 100 movies</a>
+        
+            </div>
+        </div>
+    </header>
+
+<div class="genre-title">A Universe of Genres, One Love for Movies!</div>
+
+<nav class="text-center">
+    <!-- List of Genres -->
+    <button class="genre" data-genre="action">Action</button>
+    <button class="genre" data-genre="drama">Drama</button>
+    <button class="genre" data-genre="romance">Romance</button>
+    <button class="genre" data-genre="comedy">Comedy</button>
+    <button class="genre" data-genre="thriller">Thriller</button>
+    <button class="genre" data-genre="horror">Horror</button>
+    <button class="genre" data-genre="mystery">Mystery</button>
+</nav>
+
+<main>
+    <div id="movie-list">
+        <!-- Movie Cards will be dynamically displayed here -->
+    </div>
+</main>
+
+<script>
+// Toggle menu visibility
+function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.classList.toggle('active');
+}
+
+// Data for different genres
+const movies = {
+    action: [
+    { title: "AYAN", director: "K. V. Anand", description: "An action-packed thriller about smuggling and friendship.", image: "ayan.jpg" },
+    { title: "THUPPAKI", director: "A. R. Murugadoss", description: "A soldier hunts down a terrorist sleeper cell.", image: "thuppaki.jpg" },
+    { title: "VIKRAM", director: "Lokesh Kanagaraj", description: "An action thriller about a covert operation and revenge.", image: "vikram.jpg" },
+    { title: "MANKATHA", director: "Venkat Prabhu", description: "A heist film about a ruthless cop and stolen money.", image: "mankatha.jpg" },
+    { title: "PETTA", director: "Karthik Subbaraj", description: "A nostalgic action drama with Rajinikanth's charisma.", image: "petta.jpg" },
+    { title: "SINGAM", director: "Hari", description: "An action-packed cop story with intense fight sequences.", image: "singam.jpg" },
+    { title: "MASTER", director: "Lokesh Kanagaraj", description: "A teacher confronts a gangster exploiting juveniles.", image: "master.jpg" },
+    { title: "VEDALAM", director: "Siva", description: "A brother's revenge against a deadly criminal gang.", image: "vedalam.jpg" },
+    { title: "ANNIYAN", director: "S. Shankar", description: "A vigilante fights societal corruption with multiple personas.", image: "anniyan.jpg" },
+    { title: "KAAKHA KAAKHA", director: "Gautham Vasudev Menon", description: "A gritty cop drama about crime and revenge.", image: "kakkakakka.jpg" },
+    { title: "VISHWAROOPAM", director: "Kamal Haasan", description: "A spy thriller with international espionage and action.", image: "Vishwaroopam.jpg" }
+],
+
+    drama: [
+    { title: "NAYAKAN", director: "Mani Ratnam", description: "A classic gangster drama about a man's rise in the Mumbai underworld.", image: "nayakan.jpg" },
+    { title: "PERANBU", director: "Ram", description: "An emotional story of a father raising his differently-abled daughter.", image: "peranbu.jpg" },
+    { title: "SUPER DELUXE", director: "Thiagarajan Kumararaja", description: "An anthology exploring interconnected stories and societal taboos.", image: "superdeluxe.jpg" },
+    { title: "PARIYERUM PERUMAL", director: "Mari Selvaraj", description: "A hard-hitting drama about caste discrimination and social injustice.", image: "pariyerumperumal.jpg" },
+    { title: "KAKKA MUTTAI", director: "M. Manikandan", description: "A touching tale of two slum children dreaming of tasting pizza.", image: "kakkamuttai.jpg" },
+    { title: "96", director: "C. Prem Kumar", description: "A beautiful romantic drama about lost love and nostalgia.", image: "96.jpg" },
+    { title: "VADACHENNAI", director: "Vetrimaaran", description: "A gritty gangster saga set in North Chennai.", image: "vadachennai.jpg" },
+    { title: "IRUVAR", director: "Mani Ratnam", description: "A political drama inspired by real-life Tamil Nadu politicians.", image: "iruvar.jpg" },
+    { title: "ARUVI", director: "Arun Prabu Purushothaman", description: "A social satire exploring the journey of a young woman.", image: "aruvi.jpg" },
+    { title: "PITHAMAGAN", director: "Bala", description: "A unique tale of friendship between two orphans with contrasting natures.", image: "pithamagan.jpg" },
+    ],
+    
+    romance: [
+    { title: "Alaipayuthey", director: "Mani Ratnam", description: "A beautiful love story exploring post-marital challenges.", image: "alaipayuthey.jpg" },
+    { title: "Mouna Ragam", director: "Mani Ratnam", description: "A classic tale of an arranged marriage and acceptance.", image: "mounaragam.jpg" },
+    { title: "Roja", director: "Mani Ratnam", description: "A love story set against a political backdrop.", image: "roja.jpg" },
+    { title: "Minnale", director: "Gautham Vasudev Menon", description: "A youthful romantic drama with memorable music.", image: "minnale.jpg" },
+    { title: "Sillunu Oru Kaadhal", director: "N. Krishna", description: "A poetic love story exploring past and present relationships.", image: "sok.jpg" },
+    { title: "Vaaranam Aayiram", director: "Gautham Vasudev Menon", description: "A soulful journey of love and loss.", image: "vaaranamaayiram.jpg" },
+    { title: "Vinnaithaandi Varuvaayaa", director: "Gautham Vasudev Menon", description: "A poetic tale of love and longing.", image: "vtv.jpg" },
+    { title: "Paruthiveeran", director: "Ameer", description: "An intense rural love story with a tragic end.", image: "paruthiveeran.jpg" },
+    { title: "OK Kanmani", director: "Mani Ratnam", description: "A modern-day romance about live-in relationships.", image: "okkanmani.jpg" },
+    { title: "Bombay", director: "Mani Ratnam", description: "A powerful love story set during communal riots.", image: "bombay.jpg" },
+    { title: "96", director: "C. Prem Kumar", description: "A heart-touching story of childhood sweethearts reuniting.", image: "96.jpg" },
+    { title: "Raja Rani", director: "Atlee", description: "A romantic drama about second chances in love.", image: "rajarani.jpg" },
+    
+],
+
+comedy: [
+{ title: "Kalakalappu", director: "Sundar C.", description: "A rib-tickling comedy about a struggling hotel.", image: "kalakalappu.jpg" },
+{ title: "Thamizh Padam", director: "C. S. Amudhan", description: "A spoof on popular Tamil cinema clichés.", image: "thamizh_padam.jpg" },
+{ title: "Kanna Laddu Thinna Aasaiya", director: "Manikandan", description: "A fun tale of three friends vying for one girl's love.", image: "kanna_laddu_thinna_aasaiya.jpg" },
+    { title: "Oru Kal Oru Kannadi", director: "M. Rajesh", description: "A fun-filled rom-com about friendship and love.", image: "oru_kal_oru_kannadi.jpg" },
+    { title: "Panchathanthiram", director: "K. S. Ravikumar", description: "A comedy of confusion involving a bachelor party.", image: "panchathanthiram.jpg" },
+    { title: "Michael Madana Kama Rajan", director: "Singeetam Srinivasa Rao", description: "A classic comedy of quadruplets separated at birth.", image: "michael_madana_kama_rajan.jpg" },
+    { title: "Soodhu Kavvum", director: "Nalan Kumarasamy", description: "A quirky comedy about a gang of amateur kidnappers.", image: "soodhu_kavvum.jpg" },
+    { title: "Boss Engira Baskaran", director: "M. Rajesh", description: "A hilarious story of an unemployed youth's antics.", image: "boss_engira_baskaran.jpg" },
+    
+    { title: "Vasool Raja MBBS", director: "Saran", description: "A comedic journey of a goon becoming a fake doctor.", image: "vasool_raja_mbbs.jpg" },
+  { title: "Avvai Shanmugi", director: "K. S. Ravikumar", description: "A hilarious adaptation of Mrs. Doubtfire.", image: "avvai_shanmugi.jpg" },
+],
+
+thriller: [
+    { title: "Ratsasan", director: "Ram Kumar", description: "A gripping psychological thriller about a cop hunting a serial killer.", image: "ratsasan.jpg" },
+    { title: "Vikram Vedha", director: "Pushkar-Gayathri", description: "An intense cat-and-mouse game between a cop and a gangster.", image: "vikram_vedha.jpg" },
+    { title: "Dhuruvangal Pathinaaru", director: "Karthick Naren", description: "A retired cop recounts a complex murder case.", image: "dhuruvangal_pathinaaru.jpg" },
+    { title: "Papanasam", director: "Jeethu Joseph", description: "A family's struggle to cover up an accidental crime.", image: "papanasam.jpg" },
+    { title: "Yuddham Sei", director: "Mysskin", description: "A dark thriller about a detective solving a series of murders.", image: "yuddham_sei.jpg" },
+    { title: "Thegidi", director: "P. Ramesh", description: "An investigative thriller involving a rookie detective.", image: "thegidi.jpg" },
+    { title: "Pizza", director: "Karthik Subbaraj", description: "A horror-thriller with a twisty narrative around a haunted house.", image: "pizza.jpg" },
+    { title: "Eeram", director: "Arivazhagan", description: "A supernatural thriller involving vengeful spirits.", image: "eeram.jpg" },
+    { title: "Vettaiyaadu Vilaiyaadu", director: "Gautham Menon", description: "A crime thriller about a cop chasing serial killers.", image: "vettaiyaadu_vilaiyaadu.jpg" },
+    { title: "Game Over", director: "Ashwin Saravanan", description: "A psychological thriller set in a single house.", image: "game_over.jpg" },
+],
+
+horror: [
+
+    { title: "Demonte Colony", director: "R. Ajay Gnanamuthu", description: "A chilling tale of four friends who visit a haunted mansion.", image: "demontycolony.jpg" },
+
+    { title: "Aval", director: "Milind Rau", description: "A spine-chilling horror about a ghost haunting a newly moved-in family.", image: "aval.jpg" },
+    { title: "Eeram", director: "Arivazhagan", description: "A supernatural thriller about a spirit seeking revenge.", image: "eeram.jpg" },
+    { title: "Kanchana", director: "Raghava Lawrence", description: "A horror-comedy about a man possessed by a transgender ghost.", image: "kanchana.jpg" },
+    { title: "Pisaasu", director: "Mysskin", description: "A unique horror-drama about a ghost lingering around a good-hearted man.", image: "pisaasu.jpg"},
+    { title: "Aranmanai", director: "Sundar C.", description: "A horror-comedy revolving around a haunted palace.", image: "aranmanai.jpg" },
+    { title: "Jackson Durai", director: "Dharani Dharan", description: "A horror-comedy featuring a haunted bungalow with British-era ghosts.", image: "jacksondurai.jpg" },
+    { title: "Maya", director: "Ashwin Saravanan", description: "A supernatural horror about a woman haunted by a ghostly presence.", image: "maya.jpg" },
+],
+
+mystery: [
+   
+    { title: "Thadam", director: "Magizh Thirumeni", description: "A murder mystery with a surprising twist involving identical twins.", image: "thadam.jpg" },
+    { title: "Onaayum Aattukkuttiyum", director: "Mysskin", description: "A neo-noir mystery about a man who saves a stranger and faces dire consequences.", image: "onaayumaattukkuttiyum.jpg" },
+    { title: "Psycho", director: "Mysskin", description: "A psychological thriller about a blind man chasing a serial killer.", image: "psycho.jpg" },
+    { title: "Game Over", director: "Ashwin Saravanan", description: "A psychological mystery-horror about a woman trapped in her own house.", image: "game_over.jpg" },
+    { title: "Thegidi", director: "P. Ramesh", description: "A suspense thriller about a detective who uncovers a deadly conspiracy.", image: "thegidi.jpg" },
+    { title: "Dhuruvangal Pathinaaru", director: "Karthick Naren", description: "A brilliantly woven mystery about a retired cop solving a cold case.", image: "dhuruvangal_pathinaaru.jpg" },
+    { title: "Papanasam", director: "Jeethu Joseph", description: "A thrilling drama about a father's desperate measures to protect his family.", image: "papanasam.jpg" },
+    { title: "Soodhu Kavvum", director: "Nalan Kumarasamy", description: "A dark comedy crime-thriller about a group of amateurs getting involved in a kidnapping.", image: "soodhu_kavvum.jpg" },
+    { title: "Visaranai", director: "Vetrimaaran", description: "A crime drama-mystery about police brutality and corruption.", image: "visaranai.jpg" },
+    { title: "Ratsasan", director: "Ram Kumar", description: "A gripping psychological thriller about a cop hunting a serial killer.", image: "ratsasan.jpg" },
+   
+
+]
+
+    // Add more genres here
+};
+
+// Track the currently selected genre and the page number for pagination
+let currentGenre = "action";
+let currentPage = 1;
+const moviesPerPage = 30; // Number of movies to load per scroll
+
+// Function to fetch more movies based on the genre and page number
+function fetchMovies(genre, page) {
+    const startIndex = (page - 1) * moviesPerPage;
+    const endIndex = startIndex + moviesPerPage;
+    return movies[genre].slice(startIndex, endIndex);
+}
+
+// Function to display movies for the selected genre
+// Function to display movies for the selected genre
+function displayMovies(genre) {
+    const movieList = document.getElementById("movie-list");
+    movieList.innerHTML = ""; // Clear the movie list before adding new movies
+    const movieArray = fetchMovies(genre, currentPage);
+    
+    movieArray.forEach(movie => {
+        const movieCard = `
+            <div class="movie-card">
+                <img src="${movie.image}" alt="${movie.title}">
+                <div class="overlay">
+                    <h5>${movie.title}</h5>
+                    <p>${movie.director || 'Director not available'}</p>
+                </div>
+                <div class="movie-description">
+                    <p>${movie.description}</p>
+                    <!-- View Details Button -->
+                    <button class="view-details" onclick="viewDetails('${movie.title}')">View Details</button>
+                </div>
+            </div>
+        `;
+        movieList.innerHTML += movieCard;
+    });
+}
+
+// Function to navigate to the details page
+function viewDetails(title) {
+    // Store the current genre in sessionStorage
+    sessionStorage.setItem('lastGenre', currentGenre);
+    
+    const pageName = title.toLowerCase().replace(/\s+/g, '-') + '.html';
+    window.location.href = pageName;
+}
+
+
+
+// Event listeners for genre buttons
+document.querySelectorAll('.genre').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const genre = event.target.getAttribute('data-genre');
+        currentGenre = genre; // Update the current genre
+        
+        // Update sessionStorage with the new genre
+        sessionStorage.setItem('lastGenre', currentGenre);
+        
+        displayMovies(genre); // Display movies for the selected genre
+    });
+});
+
+
+// Default display when the page loads
+window.onload = function () {
+    // Check if there is a lastGenre stored in sessionStorage
+    const savedGenre = sessionStorage.getItem('lastGenre');
+    
+    if (savedGenre && movies[savedGenre]) {
+        currentGenre = savedGenre; // Use the stored genre
+    }
+    
+    displayMovies(currentGenre); // Display movies for the current or last viewed genre
+};
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer>
+    <p>&copy; 2025 Keen Cinema | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

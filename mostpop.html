@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keen Cinema</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lora', serif;
+            background-color: #000000d5;
+            color: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            font-family: 'Poppins', sans-serif;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 18px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .line {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+        .menu-label {
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .menu-label:hover {
+            color: #000000;
+        }
+        .home-button {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin-right: 10px;
+    }
+    .home-button:hover {
+        background-color:#ff5722;
+        color: #ffffff;
+        transform: scale(1.05);
+    }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 30px;
+            background-color: rgba(54, 53, 53, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-menu a:hover {
+            background-color:#ff5722;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+        
+        /* Centered the genre title */
+        .genre-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 100px;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.movie-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 15px;
+}
+
+.movie-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.movie-card .details {
+    flex-grow: 1;
+    max-width: 70%; /* Adjusted to control text width */
+}
+
+.movie-card .details h5 {
+    font-size: 22px;
+    margin: 0;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.movie-card .details p {
+    font-size: 14px;
+    color: #444;
+    margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.view-details {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap; /* Ensures single line */
+}
+
+.view-details:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  font-size: 14px;
+  font-family: Arial, sans-serif; /* Simple and clean font */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up full height */
+}
+
+main {
+  flex: 1; /* Pushes the footer to the bottom if content is short */
+}
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            Keen Cinema
+        </div>
+        <div class="menu-container">
+            <button class="home-button" onclick="window.location.href='index.html'">Home</button>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="dropdownMenu" class="dropdown-menu">
+                
+                <a href="trendingmovies.html">Trending Movies</a>
+                <a href="topmovies.html">Top 100 movies</a>
+                <a href="genres.html">Genres</a>
+        
+            </div>
+        </div>
+    </header>   
+
+<!-- Centered Genre Title -->
+<div class="genre-title">Cinema’s Best – Most Loved and Popular Movies!</div>
+
+<main>
+    <div id="movie-list">
+        <!-- Movie Cards will be dynamically displayed here -->
+    </div>
+</main>
+
+<script>
+// Toggle menu visibility
+function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.classList.toggle('active');
+}
+
+// Movie data array
+const movies = [
+    { 
+        title: "BAASHA", 
+        director: "Suresh Krissna", 
+        description: "A Rajinikanth classic with unforgettable dialogues and action. This film revolutionized Tamil cinema with its iconic portrayal of an underworld don leading a double life. A timeless tale of power, loyalty, and justice.",
+        image: "baasha.jpg" 
+    },
+    { 
+        title: "NAYAKAN", 
+        director: "Mani Ratnam", 
+        description: "Kamal Haasan’s masterpiece inspired by real-life events. It explores the rise of an underworld don, dealing with themes of justice, love, and sacrifice. A cinematic gem with stellar performances and impactful storytelling.",
+        image: "nayakan.jpg" 
+    },
+    { 
+        title: "ANBE SIVAM", 
+        director: "Sundar C.", 
+        description: "A heartwarming tale of friendship and humanity. It beautifully depicts life's unpredictability and the philosophy that 'Love is God.' Kamal Haasan and Madhavan deliver unforgettable performances.",
+        image: "anbe_sivam.jpg" 
+    },
+    { 
+        title: "MOUNA RAGAM", 
+        director: "Mani Ratnam", 
+        description: "A beautiful romantic drama by Mani Ratnam. It sensitively portrays the complexities of love, marriage, and acceptance, with a soulful musical score that remains evergreen.",
+        image: "mounaragam.jpg" 
+    },
+    { 
+        title: "THALAPATHI", 
+        director: "Mani Ratnam", 
+        description: "A powerful story of friendship and loyalty. Loosely inspired by the Mahabharata, it explores the bond between two strong-willed men amidst crime and morality. Rajinikanth and Mammootty's camaraderie is legendary.",
+        image: "thalapathi.jpg" 
+    },
+    { 
+        title: "ALAIPAYUTHEY", 
+        director: "Mani Ratnam", 
+        description: "A romantic drama that redefined love stories in Tamil cinema. It portrays the journey of young love and marriage with real-life complexities. The mesmerizing soundtrack by A.R. Rahman still resonates.",
+        image: "alaipayuthey.jpg" 
+    },
+    { 
+        title: "KAAKHA KAAKHA", 
+        director: "Gautham Menon", 
+        description: "A gripping cop thriller starring Suriya. It combines action and romance with a compelling narrative about duty, love, and sacrifice. The movie set new standards for police dramas.",
+        image: "kakkakakka.jpg" 
+    },
+    { 
+        title: "GHILLI", 
+        director: "Dharani", 
+        description: "A high-octane action entertainer with Vijay. It is known for its fast-paced screenplay, memorable dialogues, and catchy songs. A blockbuster that redefined commercial cinema.",
+        image: "ghilli.jpg" 
+    },
+    { 
+        title: "ENTHIRAN", 
+        director: "Shankar", 
+        description: "Rajinikanth’s sci-fi blockbuster that wowed audiences. With groundbreaking visual effects, it narrates the tale of a humanoid robot grappling with human emotions. A milestone in Indian science fiction.",
+        image: "enthiran.jpg" 
+    },
+    { 
+        title: "VIKRAM VEDHA", 
+        director: "Pushkar–Gayathri", 
+        description: "An intense action thriller with a unique narrative. Inspired by the Vikram-Betaal folklore, it intricately weaves moral dilemmas into an engaging cat-and-mouse chase.",
+        image: "vikram_vedha.jpg" 
+    },
+    { 
+        title: "96", 
+        director: "C. Premkumar", 
+        description: "A nostalgic love story that touched millions of hearts. It beautifully captures the emotions of unspoken love, with poetic storytelling and soulful music by Govind Vasantha.",
+        image: "96.jpg" 
+    },
+    { 
+        title: "SOORARAI POTTRU", 
+        director: "Sudha Kongara", 
+        description: "An inspiring tale of dreams and determination. Loosely based on the life of Captain Gopinath, it showcases grit and resilience against societal odds, powered by Suriya's stellar performance.",
+        image: "sooraraipottru.jpg" 
+    },
+    { 
+        title: "VISARANAI", 
+        director: "Vetrimaaran", 
+        description: "A hard-hitting crime drama based on true events. It exposes the harsh realities of police brutality and corruption, making a powerful social statement with raw storytelling.",
+        image: "visaranai.jpg" 
+    },
+    { 
+        title: "MASTER", 
+        director: "Lokesh Kanagaraj", 
+        description: "A mass entertainer with Thalapathy Vijay and Vijay Sethupathi. The film explores the clash between good and evil with electrifying performances and a gripping narrative.",
+        image: "master.jpg" 
+    },
+    { 
+        title: "JAI BHIM", 
+        director: "T. J. Gnanavel", 
+        description: "A powerful courtroom drama with a social message. It sheds light on caste-based injustices, showcasing the fight for justice led by a determined advocate.",
+        image: "jaibhim.jpg" 
+    },
+    { 
+        title: "SIVAJI", 
+        director: "Shankar", 
+        description: "A social action drama with Rajinikanth fighting against corruption. Packed with style, humor, and powerful dialogues, it's an epic entertainer with a strong social message.",
+        image: "sivaji.jpg" 
+    },
+    { 
+        title: "PADAYAPPA", 
+        director: "K. S. Ravikumar", 
+        description: "A family drama with Rajinikanth facing challenges with honor. It's known for its iconic characters, powerful dialogues, and the unforgettable rivalry with Ramya Krishnan's Neelambari.",
+        image: "padayappa.jpg" 
+    },
+    { 
+        title: "VARUTHAPADATHA VALIBAR SANGAM", 
+        director: "Ponram", 
+        description: "A hilarious comedy starring Sivakarthikeyan and Sathyaraj. It blends humor with heartfelt emotions, making it a delightful watch for all age groups.",
+        image: "vvs.jpg" 
+    },
+    { 
+        title: "VEDALAM", 
+        director: "Siva", 
+        description: "An action-packed film with Ajith as a loving brother with a past. It combines emotion, action, and style, offering a perfect blend of mass entertainment.",
+        image: "vedalam.jpg" 
+    },
+    { 
+        title: "THERI", 
+        director: "Atlee", 
+        description: "A cop action-drama starring Vijay in a dual role. It portrays love, revenge, and justice with high-octane action sequences and emotional moments.",
+        image: "theri.jpg" 
+    },
+    { 
+        title: "VIP (VELAI ILLA PATTADHARI)", 
+        director: "Velraj", 
+        description: "A coming-of-age drama with Dhanush as a jobless engineer. It reflects the struggles and aspirations of youth with humor, romance, and powerful dialogues.",
+        image: "vip.jpg" 
+    },
+    { 
+        title: "RAATCHASAN", 
+        director: "Ram Kumar", 
+        description: "A gripping psychological thriller about a cop chasing a serial killer. Its spine-chilling narrative and edge-of-the-seat moments redefine the crime thriller genre.",
+        image: "raatsasan.jpg" 
+    }
+];
+
+
+
+// Function to display movie cards
+const movieList = document.getElementById('movie-list');
+movies.forEach(movie => {
+    const movieCard = document.createElement('div');
+    movieCard.classList.add('movie-card');
+    movieCard.innerHTML = `
+        <img src="${movie.image}" alt="${movie.title}">
+        <div class="details">
+            <h5>${movie.title}</h5>
+            <p>Director: ${movie.director}</p>
+            <p>${movie.description}</p>
+        </div>
+        <a class="view-details" href="${movie.title.toLowerCase().replace(/\s/g, '')}.html">View Details</a>
+
+    `;
+    movieList.appendChild(movieCard);
+});
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<footer>
+    <p>&copy; 2025 Keen Cinema | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>KANCHANA</h2>
+        <ul>
+          <li><span>Directed by:</span> Raghava Lawrence</li>
+          <li><span>Starring:</span> Raghava Lawrence, Lakshmi Rai, Sarathkumar, Kovai Sarala</li>
+          <li><span>Music by:</span> Thaman S</li>
+          <li><span>Release date:</span> 22 July 2011</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹120 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Kanchana+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="kanchana.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+      Kanchana follows Raghava, a young man who is terrified of ghosts. His life takes a terrifying turn when he becomes possessed 
+      by the spirit of a transgender woman named Kanchana, who was brutally murdered. Through Raghava, Kanchana seeks vengeance 
+      against those who wronged her. The movie masterfully blends horror and comedy, creating a unique viewing experience. 
+      As Raghava struggles with the possession, his family seeks help from exorcists, leading to humorous and thrilling sequences. 
+      The story culminates in an emotional and intense confrontation, highlighting themes of justice and social acceptance.
+    </p>
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+      Raghava Lawrence plays the dual role of Raghava and Kanchana, delivering a powerful performance with humor, emotion, and intensity. 
+      Lakshmi Rai stars as Priya, Raghava's love interest, adding a romantic subplot. 
+      Sarathkumar's portrayal of Kanchana before her death is both moving and impactful, bringing depth to the character. 
+      Kovai Sarala provides comic relief as Raghava's superstitious mother. 
+      The ensemble cast's performances blend horror and comedy seamlessly, contributing to the movie's appeal.
+    </p>
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+      Directed and choreographed by Raghava Lawrence, Kanchana was produced by Sun Pictures. 
+      The movie was designed to blend horror and comedy, appealing to a wide audience. 
+      Lawrence's vision was to create a unique horror-comedy genre, and he achieved this with a gripping narrative and emotional depth. 
+      Special effects and prosthetics were extensively used to enhance the horror elements. 
+      The character of Kanchana was inspired by real-life issues faced by the transgender community, adding a layer of social relevance to the story.
+    </p>
+    
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+      Kanchana was primarily shot in Chennai and Hyderabad, with eerie and atmospheric sets created to enhance the horror vibe. 
+      The climax was filmed in a grand set designed as an abandoned mansion, intensifying the supernatural elements. 
+      Lawrence's expertise in choreography was showcased in the dance numbers, which were energetic and visually appealing. 
+      Advanced filming techniques, including special effects and CGI, were used to create the ghostly appearances and possessions.
+    </p>
+    
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+      Kanchana explores themes of revenge, social justice, and acceptance, particularly focusing on the challenges faced by the transgender community. 
+      It highlights societal prejudice and the importance of dignity and respect for all individuals. 
+      The movie combines horror with humor to address serious issues, making it thought-provoking while being entertaining. 
+      It also delves into superstition and fear of the supernatural, resonating with audiences familiar with cultural beliefs in spirits and possession.
+    </p>
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+      Composed by Thaman S, the music of Kanchana was a major hit, with catchy tracks like "Karuppu Perazhaga" and "Saar Puitta Paaru." 
+      The background score was intense and eerie, enhancing the horror elements. 
+      The songs were choreographed with vibrant visuals, showcasing Lawrence's signature dance style. 
+      The music played a crucial role in maintaining the movie's pace and emotional depth.
+    </p>
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+      Released on 22 July 2011, Kanchana became a blockbuster, gaining widespread popularity for its unique blend of horror and comedy. 
+      It was praised for its engaging narrative, powerful performances, and socially relevant themes. 
+      The movie was later dubbed into multiple languages, expanding its reach to a broader audience. 
+      It received several awards and accolades, cementing its status as a cult classic in Tamil cinema.
+    </p>
+
+</div>

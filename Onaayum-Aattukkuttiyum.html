@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+  <div class="details-box">
+      <div class="details-text">
+          <h2>ONAAYUM AATUKKUTTIYUM</h2>
+          <ul>
+              <li><span>Directed by:</span> Mysskin</li>
+              <li><span>Starring:</span> Mysskin, Sri, Shaji Chen, Adithya Menon</li>
+              <li><span>Music by:</span> Ilaiyaraaja</li>
+              <li><span>Release date:</span> September 27, 2013</li>
+              <li><span>Language:</span> Tamil</li>
+              <li><span>Box office:</span> Critically Acclaimed</li>
+              <li>
+                  <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Onaayum+Aattukkuttiyum+Tamil+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                  <button class="ott-button" onclick="window.open('https://www.amazon.com/', '_blank')">Watch Movie on OTT</button>
+              </li>
+          </ul>
+      </div>
+      <img src="onaayumaattukkuttiyum.jpg" alt="Movie Poster" class="movie-image">
+  </div>
+
+  <h2 id="plot" class="section-title">Plot</h2>
+  <p>
+      Onaayum Aattukkuttiyum is a neo-noir thriller revolving around a medical student who saves a wounded man, unknowingly getting involved in a dangerous cat-and-mouse chase. 
+      The movie explores the moral dilemma between right and wrong, with a gripping narrative that keeps the audience engaged.
+  </p>
+  
+  <h2 id="cast" class="section-title">Cast</h2>
+  <p>
+      Mysskin plays the mysterious character known as the "Wolf," showcasing his intense and enigmatic presence. 
+      Sri delivers a compelling performance as Chandran, a medical student caught in a web of crime and morality. 
+      Shaji Chen and Adithya Menon play pivotal roles, enhancing the film's depth and emotional intensity.
+  </p>
+  
+  <h2 id="production" class="section-title">Production</h2>
+  <p>
+      Directed by Mysskin, the movie is known for its dark, realistic tone and intelligent screenplay. 
+      It effectively uses minimal dialogue and relies heavily on visual storytelling, creating an immersive experience. 
+      The narrative's philosophical undertones add layers to the suspenseful plot.
+  </p>
+  
+  <h2 id="filming" class="section-title">Filming</h2>
+  <p>
+      Shot mostly at night in Chennai, the film uses strategic lighting and shadow play to create an atmospheric, noir feel. 
+      The cinematography enhances the tension and mystery, contributing to the movie's unique visual style.
+  </p>
+  
+  <h2 id="themes" class="section-title">Themes and Influences</h2>
+  <p>
+      The movie explores themes of morality, redemption, and the thin line between good and evil. 
+      It delves into human nature, exploring the consequences of choices made in dire situations. 
+      Influenced by noir cinema, it presents a thought-provoking narrative with philosophical depth.
+  </p>
+  
+  <h2 id="music" class="section-title">Music</h2>
+  <p>
+      Composed by Ilaiyaraaja, the background score is haunting and elevates the suspense and emotional gravity of the narrative. 
+      The music plays a crucial role in enhancing the film's dark, philosophical tone.
+  </p>
+  
+  <h2 id="release" class="section-title">Release and Reception</h2>
+  <p>
+      Released on September 27, 2013, Onaayum Aattukkuttiyum received widespread critical acclaim for its bold narrative style and powerful performances. 
+      It was praised for its thought-provoking storytelling and was hailed as one of Mysskin's best works.
+  </p>
+</div>

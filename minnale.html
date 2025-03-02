@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - MINNALE</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 480px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>MINNALE</h2>
+        <ul>
+          <li><span>Directed by:</span> Gautham Vasudev Menon</li>
+          <li><span>Produced by:</span> Sunanda Murali Manohar</li>
+          <li><span>Starring:</span> Madhavan, Abbas, Reema Sen, Vivek</li>
+          <li><span>Music by:</span> Harris Jayaraj</li>
+          <li><span>Release date:</span> 2 February 2001</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹20 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Minnale+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.primevideo.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="minnale.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Minnale is a romantic drama revolving around Rajesh, who falls in love with Reena at first sight. 
+        Captivated by her beauty and charm, he becomes determined to win her heart. 
+        However, his world is turned upside down when he discovers that Reena is engaged to his college rival, Rajiv. 
+        Fueled by his love and the pain of losing her, Rajesh impersonates Rajiv, leading to a series of emotional conflicts and comedic misunderstandings. 
+        The film beautifully explores love, friendship, and the consequences of deceit, while portraying Rajesh's journey of realizing the importance of honesty and integrity in love. 
+        The narrative keeps the audience engaged with its light-hearted humor, emotional moments, and a heartwarming conclusion where love triumphs over lies.
+      </p>
+      
+      <h2 id="cast" class="section-title">Cast</h2>
+      <p>
+        Madhavan as Rajesh perfectly captures the charm and vulnerability of a man in love, delivering a heartfelt performance that resonates with the audience. 
+        Reema Sen as Reena brings elegance and emotional depth to her character, making the romantic chemistry believable and endearing. 
+        Abbas as Rajiv portrays the role of a sophisticated, caring fiancé with conviction, adding complexity to the love triangle. 
+        Vivek, as Rajesh's witty friend, provides comic relief with his impeccable timing and humor, making the emotional narrative lighter and more enjoyable. 
+        The supporting cast also delivers memorable performances, enhancing the film's relatability and emotional appeal.
+      </p>
+      
+      <h2 id="production" class="section-title">Production</h2>
+      <p>
+        Directed by Gautham Vasudev Menon, Minnale marked his debut in Tamil cinema, celebrated for its fresh storytelling and relatable romance. 
+        Gautham's unique narrative style, blending romance with realism, set a new trend in Tamil films. 
+        The film was shot across scenic locations in Chennai and Ooty, beautifully capturing the youthful vibe and romantic atmosphere. 
+        The director's attention to detail in character development and emotional storytelling made Minnale a timeless love story. 
+        The dialogues were well-crafted, with witty humor and heartfelt conversations that resonated with the audience. 
+        The production team’s dedication to creating a modern yet soulful romantic film was evident in every frame.
+      </p>
+      
+      <h2 id="music" class="section-title">Music</h2>
+      <p>
+        Harris Jayaraj's debut as a composer was a musical sensation. Songs like "Vaseegara" became timeless classics, celebrated for their melodious tunes and poetic lyrics. 
+        His innovative fusion of Western beats with traditional melodies created a refreshing musical experience. 
+        Each song perfectly complemented the romantic narrative, enhancing the emotional depth of the story. 
+        The background score beautifully underscored the film's poignant moments, amplifying the emotional impact. 
+        The soundtrack became a chartbuster, influencing the music industry and earning Harris Jayaraj critical acclaim. 
+        Even today, Minnale's music remains popular among fans, making it an evergreen musical hit.
+      </p>
+      
+      <h2 id="release" class="section-title">Release</h2>
+      <p>
+        Released on 2nd February 2001, Minnale became a blockbuster, loved for its music, romance, and performances. 
+        It was highly praised for its refreshing narrative style and relatable characters. 
+        The film struck a chord with the youth, becoming a trendsetter for modern romantic dramas in Tamil cinema. 
+        Minnale's success catapulted Madhavan to stardom and established Gautham Vasudev Menon as a promising director. 
+        The movie's dialogues and songs became cultural phenomena, influencing pop culture and memes. 
+        Its popularity led to a Hindi remake titled "Rehnaa Hai Terre Dil Mein," further cementing its legacy as one of Tamil cinema's most cherished romantic films.
+      </p>
+      
+  </div>
+</body>
+</html>

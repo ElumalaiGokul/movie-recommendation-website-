@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>AMARAN</h2>
+            <ul>
+                <li><span>Directed by:</span> K. Rajeshwar</li>
+                <li><span>Starring:</span> Karthik, Bhanupriya, Radha Ravi, Vijayakumar</li>
+                <li><span>Music by:</span> Adithyan</li>
+                <li><span>Release date:</span> 1992</li>
+                <li><span>Language:</span> Tamil</li>
+                <li><span>Box office:</span> Successful Commercial Run</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Amaran+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="amaran.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Amaran follows the story of a street orphan who rises to power as a feared don in North Madras. 
+        The narrative explores his journey from a petty thief to a powerful figure, navigating through betrayal, power struggles, and revenge. 
+        His confrontation with a ruthless rival forms the crux of the story. 
+        Amidst the crime and violence, he finds love and faces moral dilemmas, making the character layered and relatable. 
+        The film is known for its gripping storyline, action-packed sequences, and emotional depth.
+    </p>
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        Karthik plays the titular role of Amaran, delivering a powerful performance as the charismatic and fierce don. 
+        Bhanupriya plays his love interest, adding emotional depth to the narrative. 
+        Radha Ravi portrays the main antagonist, giving a menacing and impactful performance. 
+        Vijayakumar and other supporting actors contribute significantly to the story, enhancing the dramatic intensity of the movie. 
+        The strong cast and their compelling performances make Amaran a memorable cinematic experience.
+    </p>
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        Directed by K. Rajeshwar, Amaran was produced with high production values, reflecting in its grandeur and stylish storytelling. 
+        The screenplay was crafted to balance action, romance, and drama seamlessly. 
+        The director’s vision of depicting the underworld of North Madras with realism was executed brilliantly. 
+        With gripping dialogues and intense confrontations, the narrative maintained a tight pace. 
+        The film’s commercial success was attributed to its engaging screenplay and dynamic direction.
+    </p>
+    
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Shot in real locations across Chennai, Amaran showcases the raw and rugged backdrop of North Madras. 
+        The cinematography by K. V. Anand captures the intensity of the urban landscape and action sequences beautifully. 
+        The elaborate set designs and costumes reflect the era and add authenticity to the narrative. 
+        Action scenes were choreographed meticulously, enhancing the thrill and excitement of the movie. 
+        The song sequences were picturized with grandeur, complementing the film’s commercial appeal.
+    </p>
+    
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        Amaran explores themes of power, betrayal, revenge, and redemption. 
+        It delves into the moral conflicts faced by individuals entangled in crime and violence. 
+        The film portrays the complexity of human emotions, loyalty, and the consequences of choices made in the pursuit of power. 
+        It also reflects the socio-political scenario of the underworld in North Madras. 
+        Influenced by classic gangster dramas, Amaran maintains a gritty and realistic tone throughout.
+    </p>
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        Composed by Adithyan, the music of Amaran became a sensational hit, with songs like "Vethalaya Potendi" becoming evergreen classics. 
+        The soundtrack perfectly complements the film’s narrative, enhancing both the emotional and action-packed moments. 
+        The background score elevates the dramatic intensity and maintains the gripping atmosphere. 
+        The songs were choreographed with vibrant visuals and energetic dance moves, contributing to the film's commercial success.
+    </p>
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        Released in 1992, Amaran received positive reviews for its powerful performances, engaging storyline, and stylish direction. 
+        The movie was a commercial success and gained a cult following, especially for its memorable dialogues and iconic songs. 
+        It was praised for its realistic portrayal of the underworld and complex character arcs. 
+        Amaran continues to be remembered as one of the finest gangster dramas in Tamil cinema, influencing many films in the genre.
+    </p>
+</div>

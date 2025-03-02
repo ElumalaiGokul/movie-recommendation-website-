@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+  <div class="content">
+  <div class="details-box">
+      <div class="details-text">
+          <h2>IRUVAR</h2>
+          <ul>
+              <li><span>Directed by:</span> Mani Ratnam</li>
+              <li><span>Starring:</span> Mohanlal, Prakash Raj, Aishwarya Rai, Revathi, Tabu, Gautami</li>
+              <li><span>Music by:</span> A. R. Rahman</li>
+              <li><span>Release date:</span> 1997</li>
+              <li><span>Language:</span> Tamil</li>
+              <li><span>Box office:</span> Critically Acclaimed</li>
+              <li>
+                  <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Iruvar+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                  <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+              </li>
+          </ul>
+      </div>
+      <img src="iruvar.jpg" alt="Movie Poster" class="movie-image">
+  </div>
+
+  <h2 id="plot" class="section-title">Plot</h2>
+  <p>
+      Iruvar is a political drama inspired by the lives of two iconic figures in Tamil Nadu's political history. 
+      It follows the friendship and rivalry between Anandan (Mohanlal), a struggling actor who rises to superstardom, 
+      and Tamizhselvan (Prakash Raj), a talented writer and politician. 
+      Their journey from allies to political adversaries reflects the socio-political landscape of Tamil Nadu. 
+      The narrative explores themes of power, ambition, loyalty, and betrayal, 
+      set against the backdrop of cinema and politics in the 1950s and 60s.
+  </p>
+  
+  <h2 id="cast" class="section-title">Cast</h2>
+  <p>
+      Mohanlal delivers a powerful performance as Anandan, capturing the character's charisma and emotional depth. 
+      Prakash Raj excels as Tamizhselvan, portraying the complexities of a political leader with finesse. 
+      Aishwarya Rai makes her debut, playing a dual role with grace and elegance. 
+      Revathi, Tabu, and Gautami add emotional layers to the narrative with their impactful performances. 
+      The stellar ensemble cast brings authenticity to the characters inspired by real-life personalities.
+  </p>
+  
+  <h2 id="production" class="section-title">Production</h2>
+  <p>
+      Directed by Mani Ratnam, Iruvar is known for its bold narrative and nuanced storytelling. 
+      The screenplay masterfully blends historical events with fictionalized drama, maintaining a realistic and balanced portrayal. 
+      Mani Ratnam’s vision of depicting the intertwining worlds of cinema and politics is executed brilliantly. 
+      The film’s narrative structure, character arcs, and dialogues are crafted to reflect the political dynamics of the era. 
+      Iruvar remains a milestone in Indian cinema for its artistic and cinematic brilliance.
+  </p>
+  
+  <h2 id="filming" class="section-title">Filming</h2>
+  <p>
+      Santosh Sivan's cinematography is a visual masterpiece, capturing the period setting with stunning visuals. 
+      The use of sepia tones and artistic framing enhances the film’s nostalgic appeal. 
+      Authentic set designs and costumes reflect the cultural and political atmosphere of the 1950s and 60s. 
+      The realistic portrayal of film sets, political rallies, and public gatherings adds historical authenticity. 
+      The meticulous attention to detail makes Iruvar a visually captivating cinematic experience.
+  </p>
+  
+  <h2 id="themes" class="section-title">Themes and Influences</h2>
+  <p>
+      Iruvar explores themes of friendship, power, ambition, and betrayal. 
+      It delves into the complex relationship between art and politics, highlighting the influence of cinema on political ideologies. 
+      The narrative reflects the rise of Dravidian politics and its impact on Tamil Nadu's socio-political landscape. 
+      It portrays the emotional conflicts and moral dilemmas faced by individuals entangled in ambition and loyalty. 
+      Inspired by real-life political icons, the film maintains a balanced and respectful narrative.
+  </p>
+  
+  <h2 id="music" class="section-title">Music</h2>
+  <p>
+      Composed by A. R. Rahman, the music of Iruvar is a timeless classic, blending traditional and modern elements. 
+      Songs like "Narumugaiye" and "Vennilave" are celebrated for their lyrical beauty and soulful melodies. 
+      The background score enhances the film’s dramatic intensity and emotional depth. 
+      The songs are choreographed aesthetically, reflecting the cultural and artistic heritage of Tamil cinema. 
+      A. R. Rahman’s music plays a crucial role in elevating the narrative’s emotional and nostalgic appeal.
+  </p>
+  
+  <h2 id="release" class="section-title">Release</h2>
+  <p>
+      Released in 1997, Iruvar received critical acclaim for its bold narrative, powerful performances, and Mani Ratnam’s masterful direction. 
+      The film was praised for its artistic brilliance, political commentary, and historical authenticity. 
+      Although it faced controversies due to its portrayal of real-life political figures, it gained a cult following over time. 
+      Iruvar is regarded as a cinematic classic and is studied for its narrative structure, visual storytelling, and musical genius. 
+      It continues to be celebrated as one of Mani Ratnam’s finest works in Indian cinema.
+  </p>
+</div>

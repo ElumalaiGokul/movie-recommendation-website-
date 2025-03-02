@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>LEO</h2>
+            <ul>
+                <li><span>Directed by:</span> Lokesh Kanagaraj</li>
+                <li><span>Starring:</span> Vijay, Sanjay Dutt, Arjun Sarja, Trisha Krishnan</li>
+                <li><span>Music by:</span> Anirudh Ravichander</li>
+                <li><span>Release date:</span> October 19, 2023</li>
+                <li><span>Language:</span> Tamil</li>
+                <li><span>Box office:</span> ₹500 crore (Blockbuster)</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Leo+2023+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.netflix.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="leo.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        "Leo" follows Parthiban "Parthi," a café owner in Theog, Himachal Pradesh, who faces threats from a drug cartel led by Antony Das. 
+        Mistaken for the long-lost son, Leo, Parthi must confront his mysterious past to protect his family. 
+        The narrative explores his struggle to shield his loved ones while unearthing buried secrets.
+    </p>
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        Vijay delivers a powerful performance as Parthi/Leo, showcasing his dynamic range. 
+        Sanjay Dutt portrays the antagonist Antony Das with intensity, while Arjun Sarja plays Harold Das. 
+        Trisha Krishnan brings depth to her role as Sathya, Parthi’s supportive wife.
+    </p>
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        Directed by Lokesh Kanagaraj, "Leo" is part of the Lokesh Cinematic Universe. 
+        Inspired by the film "A History of Violence," the movie combines action, drama, and emotional storytelling. 
+        Produced by Seven Screen Studio, the film was praised for its gripping narrative and powerful direction.
+    </p>
+    
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Filmed in real locations in Kashmir and Chennai, "Leo" captures the authentic landscapes of Himachal Pradesh. 
+        Cinematographer Manoj Paramahamsa uses natural lighting and earthy tones to enhance the visual storytelling. 
+        The realistic set designs and raw visuals contribute to the film's immersive experience.
+    </p>
+    
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        "Leo" explores themes of identity, family, and the impact of the past on the present. 
+        It delves into the duality of human nature and the lengths one will go to protect loved ones. 
+        The film portrays emotional conflicts and the struggle between vengeance and forgiveness.
+    </p>
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        Composed by Anirudh Ravichander, the music in "Leo" resonates with the film's intense and emotional narrative. 
+        The soundtrack blends contemporary and traditional elements, enhancing the movie’s cultural backdrop and emotional depth.
+    </p>
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        "Leo" was released on October 19, 2023, in standard and IMAX formats, marking Vijay's first IMAX release. 
+        The film became a commercial success, grossing over ₹500 crore worldwide. 
+        It premiered on Netflix on November 24, 2023, in multiple languages, gaining widespread acclaim for its thrilling narrative and powerful performances.
+    </p>
+</div>

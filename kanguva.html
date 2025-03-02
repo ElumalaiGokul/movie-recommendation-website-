@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+  
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>KANGUVA</h2>
+            <ul>
+                <li><span>Directed by:</span> Siva</li>
+                <li><span>Starring:</span> Suriya, Disha Patani</li>
+                <li><span>Music by:</span> Devi Sri Prasad (DSP)</li>
+                <li><span>Release date:</span> 2024</li>
+                <li><span>Language:</span> Tamil (Dubbed in multiple languages)</li>
+                <li><span>Box office:</span> Expected Blockbuster</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Kanguva+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="kanguva.webp" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Kanguva is an epic action drama set in a historical fantasy world. 
+        It follows the journey of a fearless warrior who is cursed with immortality and battles against evil forces. 
+        The narrative explores his heroic adventures, challenges, and sacrifices as he defends his land and loved ones. 
+        With stunning visuals, grand war sequences, and a powerful storyline, Kanguva promises an immersive cinematic experience. 
+        The movie delves into themes of valor, destiny, and the eternal fight between good and evil.
+    </p>
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        Suriya plays the titular role of the immortal warrior, showcasing intense action and emotional depth. 
+        Disha Patani plays his love interest, bringing grace and charm to the narrative. 
+        The supporting cast includes prominent actors in pivotal roles, enhancing the storyline's grandeur and impact. 
+        With powerful performances and stellar screen presence, the cast adds significant value to the epic tale of Kanguva.
+    </p>
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        Directed by Siva, Kanguva is produced with massive scale and high production values, bringing a visual spectacle to the screen. 
+        The film is bankrolled by Studio Green and UV Creations, known for producing big-budget blockbusters. 
+        Extensive use of VFX and cutting-edge technology enhances the historical fantasy setting. 
+        The director’s vision of creating an immersive mythical universe is executed with grandeur and precision.
+    </p>
+    
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Kanguva was shot across breathtaking locations, including exotic landscapes and massive sets built to recreate ancient kingdoms. 
+        The cinematography by Vetri Palanisamy captures the majestic visuals and grand war sequences with exceptional detailing. 
+        The action choreography is designed to be intense and larger-than-life, delivering a thrilling experience to the audience. 
+        The attention to costume design and set decoration adds authenticity to the historical narrative.
+    </p>
+    
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        Kanguva explores themes of immortality, destiny, heroism, and the eternal battle between good and evil. 
+        It portrays the journey of a warrior burdened by his curse and his quest for redemption. 
+        The narrative reflects elements of mythology and folklore, giving it a mystical and larger-than-life appeal. 
+        Influenced by epic historical sagas, Kanguva blends fantasy with action, creating a unique cinematic experience.
+    </p>
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        Composed by Devi Sri Prasad (DSP), the music of Kanguva is expected to be a grand musical extravaganza. 
+        The soundtrack features powerful background scores that enhance the epic scale and emotional intensity of the film. 
+        The songs are composed to complement the narrative, with energetic battle anthems and soulful melodies. 
+        The music plays a crucial role in amplifying the heroic and emotional moments in the movie.
+    </p>
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        Scheduled for a grand theatrical release in 2024, Kanguva is one of the most anticipated movies of the year. 
+        It is planned to be released in multiple languages, reaching a wide audience globally. 
+        The movie has generated significant buzz for its epic scale, powerful performances, and visual grandeur. 
+        With Suriya’s star power and Siva’s visionary direction, Kanguva is expected to set new benchmarks in Indian cinema.
+    </p>
+</div>

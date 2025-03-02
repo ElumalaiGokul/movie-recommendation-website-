@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 480px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>MANKATHA</h2>
+        <ul>
+          <li><span>Directed by:</span> Venkat Prabhu</li>
+          <li><span>Produced by:</span> Dhayanidhi Alagiri, Vivek Rathnavel</li>
+          <li><span>Starring:</span> Ajith Kumar, Arjun, Trisha Krishnan, Vaibhav Reddy</li>
+          <li><span>Music by:</span> Yuvan Shankar Raja</li>
+          <li><span>Release date:</span> 31 August 2011</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹130 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Mankatha+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.primevideo.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+          
+        </ul>
+      </div>
+      <img src="mankatha.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+<p>
+  Mankatha follows Vinayak Mahadevan, a suspended police officer with a cunning mind and a taste for danger. When he learns about a massive heist involving ₹500 crore of illegal betting money, he teams up with a gang to double-cross them and claim the loot for himself. The plot is filled with thrilling twists, deceit, and betrayal, making it an edge-of-the-seat action thriller. As the heist unfolds, unexpected alliances and shocking revelations keep the audience hooked, leading to a climactic showdown that defies all expectations. The narrative explores the dark side of greed and power, showcasing Vinayak's manipulative strategies and his fearless pursuit of wealth. With every character having hidden agendas, the story masterfully plays with trust and treachery, leaving the audience guessing until the very end. The film's non-linear storytelling and gripping screenplay contribute to its unpredictable and engaging plot, making it a standout heist thriller in Tamil cinema.
+</p>
+
+<h2 id="cast" class="section-title">Cast</h2>
+<p>
+  Ajith Kumar delivers a powerful performance as the anti-hero Vinayak Mahadevan, portraying his ruthless and charismatic character with finesse. His portrayal of a morally ambiguous, charming villain broke conventional stereotypes, adding depth and complexity to his character. Arjun as Prithviraj adds intensity as the cop chasing the heist, delivering a strong and composed performance that balances Ajith's rebellious character. Trisha Krishnan plays Sanjana, bringing emotional depth to her role with her subtle expressions and strong screen presence. Vaibhav Reddy, Premgi Amaren, and Mahat Raghavendra form the rest of the heist gang, each bringing a unique flair and personality, adding humor and thrill to the narrative. Action King Arjun’s confrontational scenes with Ajith are powerful, creating electrifying moments on screen. Each actor brings depth to their roles, contributing to the film's dynamic ensemble cast and making Mankatha a memorable multi-starrer.
+</p>
+
+<h2 id="production" class="section-title">Production</h2>
+<p>
+  Directed by Venkat Prabhu, Mankatha showcases a gripping narrative with sleek action sequences and stylish cinematography. Venkat Prabhu's bold decision to portray Ajith in a negative role was a game-changer, breaking the traditional hero mold in Tamil cinema. Filmed across Chennai, Bangkok, and Mumbai, the movie's grand scale and detailed production design elevate its visual appeal. The intense chase sequences and meticulously choreographed action scenes were executed with high technical standards. The film's screenplay is tightly woven, maintaining suspense and thrill throughout its runtime. The director's clever storytelling, combined with smart dialogues and witty humor, enhances the film’s entertainment quotient. The production team’s dedication to capturing authentic cityscapes and high-stakes action paid off, contributing to Mankatha’s realistic yet larger-than-life feel.
+</p>
+
+<h2 id="music" class="section-title">Music</h2>
+<p>
+  Composed by Yuvan Shankar Raja, the soundtrack features chart-topping songs like "Vilayadu Mankatha" and "Machi Open The Bottle," enhancing the film's high-octane feel. Yuvan's electrifying background score amplifies the tension and excitement during key moments, adding an adrenaline rush to the action sequences. His innovative use of electronic beats and catchy melodies resonate with the movie's urban, stylish vibe. The songs became instant hits, with their energetic rhythm and peppy tunes appealing to fans across all age groups. The music not only complements the narrative's pace but also captures the rebellious spirit of Vinayak's character. The background score, especially during the heist and chase scenes, intensifies the cinematic experience, making Mankatha's music an integral part of its storytelling.
+</p>
+
+<h2 id="release" class="section-title">Release</h2>
+<p>
+  Released on August 31, 2011, Mankatha became a blockbuster, praised for Ajith's bold anti-hero portrayal and its gripping storyline, securing its place as one of Tamil cinema's most iconic action thrillers. The movie celebrated Ajith's 50th film, making it a landmark in his career. Fans and critics lauded his daring role choice, establishing him as a trendsetter in breaking conventional hero images. The film received positive reviews for its engaging screenplay, unpredictable twists, and top-notch performances. Its commercial success solidified its status as a cult classic, inspiring future heist thrillers in Indian cinema. Mankatha’s dialogues and stylish scenes became iconic, influencing pop culture and memes. The film’s success was celebrated worldwide, with fans commemorating its anniversary even years after its release. Its impact on Tamil cinema remains unmatched, cementing Mankatha as a timeless entertainer.
+</p>
+</div>
+</body>
+</html>

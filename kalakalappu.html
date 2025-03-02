@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - KALAKALAPPU</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 480px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>KALAKALAPPU</h2>
+        <ul>
+          <li><span>Directed by:</span> Sundar C.</li>
+          <li><span>Produced by:</span> Kushboo Sundar</li>
+          <li><span>Starring:</span> Vimal, Shiva, Anjali, Oviya, Santhanam</li>
+          <li><span>Music by:</span> Vijay Ebenezer</li>
+          <li><span>Release date:</span> 11 May 2012</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹50 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Kalakalappu+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="kalakalappu.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        Kalakalappu revolves around Seenu, who struggles to keep his ancestral restaurant afloat, and his encounters with Madhavi, a strict yet kind-hearted health inspector. Chaos ensues when his carefree brother Raghu arrives, bringing his own set of problems. Together, they face comical situations involving local goons, corrupt officials, and quirky customers. The plot is filled with humor, romance, and misunderstandings, keeping the audience entertained with laugh-out-loud moments. As the brothers try to revive the restaurant amidst hilarious obstacles, the narrative cleverly combines slapstick comedy with witty dialogues. The film's vibrant settings and fast-paced screenplay maintain an energetic flow, making it a perfect family entertainer. Through its humorous narrative, Kalakalappu subtly explores themes of love, friendship, and perseverance, delivering a heartwarming message wrapped in laughter.
+      </p>
+      
+      <h2 id="cast" class="section-title">Cast</h2>
+      <p>
+        Vimal portrays Seenu with a blend of innocence and charm, delivering fantastic comic timing, while Shiva effortlessly brings laughter as Raghu with his unique humor style. Anjali shines as Madhavi, balancing her strict demeanor with endearing vulnerability, while Oviya adds charm and romance, making her scenes delightful. Santhanam steals the show with his witty one-liners and impeccable humor, ensuring non-stop laughter throughout the film. Ilavarasu, Manobala, and other supporting actors contribute significantly to the movie’s humorous moments, enhancing its entertainment value. The ensemble cast's chemistry and energetic performances enhance the movie's fun quotient, making every scene lively and engaging. Their natural flair for comedy, combined with well-written dialogues, keeps the narrative vibrant and enjoyable for audiences of all ages.
+      </p>
+      
+      <h2 id="production" class="section-title">Production</h2>
+      <p>
+        Directed by Sundar C., known for his expertise in comedy, Kalakalappu seamlessly blends humor with a light-hearted narrative, maintaining a joyful tone throughout. His direction ensures perfect comic timing and engaging storytelling, keeping the audience hooked from start to finish. The vibrant cinematography by U. K. Senthil Kumar captures the colorful sets and bustling locales, adding a lively atmosphere to the film. The energetic editing by Praveen K. L. and N. B. Srikanth maintains the movie's fast pace, enhancing its comedic impact. Filmed in picturesque locations like Kumbakonam and Chennai, the scenic backdrops add to the movie's visual appeal. Sundar C.'s knack for situational comedy, combined with witty dialogues, ensures a perfect balance of humor and emotion. The film's vibrant production design complements its playful narrative, creating an immersive experience for the audience.
+      </p>
+      
+      <h2 id="music" class="section-title">Music</h2>
+      <p>
+        Composed by Vijay Ebenezer, the music is peppy and catchy, perfectly complementing the movie's energetic vibe. The soundtrack features hit numbers like "Ivalunga Imsai" and "Kaankal Irandal," which became instant chartbusters. The songs are thoughtfully placed, enhancing the narrative’s flow without interrupting the story. The background score effectively amplifies the humor and emotional moments, keeping the audience engaged. Vijay Ebenezer's fusion of traditional and contemporary beats adds freshness to the soundtrack, making it appealing to all age groups. The dance numbers are choreographed energetically, matching the film’s lively tone and making the audience groove along. The vibrant music, combined with colorful visuals, enhances the movie's feel-good factor, leaving a lasting impact on viewers.
+      </p>
+      
+      <h2 id="release" class="section-title">Release</h2>
+      <p>
+        Released on 11 May 2012, Kalakalappu was a commercial success, celebrated for its humor, engaging screenplay, and entertainment value. It received positive reviews from critics and audiences alike, praising its well-executed comedy and charismatic performances. The film's light-hearted narrative and relatable humor made it a family favorite, attracting audiences of all age groups. Its success marked a significant milestone in Sundar C.'s directorial career, reinforcing his reputation as a master of comedy. The movie's dialogues became popular catchphrases, influencing pop culture and social media memes. Its commercial triumph led to a sequel, "Kalakalappu 2," which continued the franchise's legacy of laughter and fun. Even years after its release, Kalakalappu remains a beloved comedy classic, known for its timeless humor and unforgettable characters. Its impact on Tamil comedy cinema is profound, setting new benchmarks for situational and slapstick humor.
+      </p>
+      
+  </div>
+</body>
+</html>

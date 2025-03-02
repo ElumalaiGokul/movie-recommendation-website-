@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content">
+  <div class="details-box">
+      <div class="details-text">
+          <h2>LOVER</h2>
+          <ul>
+              <li><span>Directed by:</span> Anil Kumar</li>
+              <li><span>Starring:</span> Harish Kalyan, Ivana, Sathyaraj, Yogi Babu</li>
+              <li><span>Music by:</span> Sean Roldan</li>
+              <li><span>Release date:</span> 2024</li>
+              <li><span>Language:</span> Tamil</li>
+              <li><span>Box office:</span> Romantic Hit Expected</li>
+              <li>
+                  <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Lover+Tamil+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                  <button class="ott-button" onclick="window.open('https://www.netflix.com/', '_blank')">Watch Movie on OTT</button>
+              </li>
+          </ul>
+      </div>
+      <img src="lover.webp" alt="Movie Poster" class="movie-image">
+  </div>
+
+  <h2 id="plot" class="section-title">Plot</h2>
+  <p>
+      Lover is a heartwarming romantic drama that explores the journey of two young souls who find love in the most unexpected circumstances. 
+      Set against a vibrant urban backdrop, the story follows Arjun and Meera as they navigate through love, misunderstandings, and emotional challenges. 
+      The narrative beautifully portrays the essence of modern-day relationships, highlighting the joy and pain of love. 
+      With relatable characters and an emotional storyline, Lover is a touching tale of romance and self-discovery.
+  </p>
+  
+  <h2 id="cast" class="section-title">Cast</h2>
+  <p>
+      Harish Kalyan plays the charming Arjun, bringing warmth and charisma to his character with a heartfelt performance. 
+      Ivana shines as Meera, perfectly balancing grace and emotional depth in her role. 
+      Sathyaraj portrays a pivotal character, adding wisdom and emotional weight to the narrative. 
+      Yogi Babu provides comic relief, infusing humor and light-hearted moments into the romantic drama. 
+      The ensemble cast adds authenticity to the narrative with impactful performances.
+  </p>
+  
+  <h2 id="production" class="section-title">Production</h2>
+  <p>
+      Directed by Anil Kumar, Lover is produced with high production values, capturing the vibrant urban setting with finesse. 
+      The director's vision of portraying a modern love story with emotional realism is executed brilliantly. 
+      The screenplay is tightly woven with romance, humor, and heartfelt moments, creating an engaging narrative. 
+      With relatable dialogues and a fresh approach, Lover resonates with audiences of all ages.
+  </p>
+  
+  <h2 id="filming" class="section-title">Filming</h2>
+  <p>
+      Lover was filmed in scenic urban locations, capturing the youthful vibe and romantic ambiance. 
+      The cinematography by Richard M. Nathan enhances the visual appeal with vibrant colors and elegant framing. 
+      The romantic sequences are beautifully crafted, adding charm and emotional depth to the narrative. 
+      The film’s stylish presentation and relatable portrayal of modern relationships make it a visual treat.
+  </p>
+  
+  <h2 id="themes" class="section-title">Themes and Influences</h2>
+  <p>
+      Lover explores themes of love, trust, self-discovery, and the complexity of modern relationships. 
+      It delves into the emotional struggles of young couples navigating through misunderstandings and societal expectations. 
+      The narrative portrays the beauty of love and the importance of communication in relationships. 
+      Influenced by contemporary romantic dramas, the movie maintains a heartfelt and realistic tone, resonating with today’s youth.
+  </p>
+  
+  <h2 id="music" class="section-title">Music</h2>
+  <p>
+      Composed by Sean Roldan, the music of Lover beautifully complements the romantic narrative with soulful melodies. 
+      The soundtrack features chart-topping love anthems and emotional ballads that enhance the movie's emotional impact. 
+      Songs like "Uyire Uyire" and "Kaadhal Mazhai" are expected to become favorites among music lovers. 
+      The background score seamlessly blends with the storytelling, amplifying the romantic and emotional moments.
+  </p>
+  
+  <h2 id="release" class="section-title">Release</h2>
+  <p>
+      Scheduled for release in 2024, Lover is eagerly awaited for its heart-touching narrative and refreshing take on modern romance. 
+      The trailer received positive feedback for its relatable storyline and endearing performances. 
+      With its emotional depth, beautiful music, and contemporary vibe, Lover is expected to be a commercial hit. 
+      It is anticipated to resonate with audiences looking for meaningful and heartfelt love stories in Tamil cinema.
+  </p>
+</div>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 450px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+      <div class="details-text">
+        <h2>DEMONTE COLONY</h2>
+        <ul>
+          <li><span>Directed by:</span> R. Ajay Gnanamuthu</li>
+          <li><span>Starring:</span> Arulnithi, Ramesh Thilak, Sananth, Abhishek Joseph George</li>
+          <li><span>Music by:</span> Keba Jeremiah</li>
+          <li><span>Release date:</span> 22 May 2015</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹25 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Demonte+Colony+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.hotstar.com/', '_blank')">Watch Movie on OTT</button>
+          </li>
+        </ul>
+      </div>
+      <img src="demontycolony.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+      Demonte Colony is a horror thriller that revolves around four friends who visit a deserted mansion in Chennai's Demonte Colony out of curiosity. 
+      What begins as a fun adventure quickly turns into a nightmare as they encounter supernatural forces. 
+      The friends struggle to escape the curse that follows them back to their apartment, leading to a series of eerie and terrifying events. 
+      The movie builds a chilling atmosphere with minimal jump scares, relying on a strong narrative and haunting background score. 
+      It explores themes of greed, friendship, and the consequences of disturbing the unknown.
+    </p>
+    
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+      Arulnithi plays the lead role as Srinivasan, delivering a compelling performance as a skeptical yet vulnerable character. 
+      Ramesh Thilak adds humor to the otherwise intense narrative, balancing the tension with his witty dialogue delivery. 
+      Sananth and Abhishek Joseph George contribute to the realism of the friendship dynamics, making the characters relatable and grounded. 
+      The small yet effective cast ensures a focused storyline with gripping performances throughout the film.
+    </p>
+    
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+      Directed by debutant R. Ajay Gnanamuthu, Demonte Colony was produced by Mohana Movies. 
+      The screenplay was inspired by real-life rumors surrounding Demonte Colony, adding authenticity to the horror elements. 
+      The director skillfully used minimalistic settings to create an atmospheric horror experience, avoiding clichés often seen in the genre. 
+      The focus on psychological fear rather than excessive visual effects made the movie stand out. 
+      The production team emphasized sound design to enhance the eerie and suspenseful mood throughout the film.
+    </p>
+    
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+      Most of the film was shot indoors, creating a claustrophobic and intense atmosphere. 
+      The cinematography by Aravinnd Singh utilized dim lighting and shadow play to amplify the suspense. 
+      The haunting visuals of the abandoned mansion were meticulously crafted to evoke fear. 
+      Filming took place in real locations, including Demonte Colony, to maintain authenticity. 
+      The limited settings enhanced the narrative's focus, drawing viewers into the chilling experience.
+    </p>
+    
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+      Demonte Colony explores themes of fear, greed, and the consequences of curiosity. 
+      It delves into the psychological impact of encountering the supernatural and the inevitable fate that follows. 
+      The movie questions human nature and the tendency to ignore warnings for personal gain. 
+      It also reflects on friendship and loyalty under extreme circumstances. 
+      Influenced by classic horror storytelling, the film relies on atmosphere and narrative depth rather than cheap scares.
+    </p>
+    
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+      Composed by Keba Jeremiah, the background score is a significant contributor to the film's haunting atmosphere. 
+      The music intensifies the suspense and fear, perfectly complementing the eerie visuals. 
+      The lack of commercial songs maintained the movie's dark and serious tone. 
+      The subtle yet impactful score enhances the psychological horror, leaving a lingering sense of unease.
+    </p>
+    
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+      Released on 22 May 2015, Demonte Colony was well-received by critics and audiences for its innovative approach to horror. 
+      It became a sleeper hit at the box office, praised for its gripping narrative, atmospheric tension, and powerful performances. 
+      The film's realistic portrayal of fear and effective storytelling set a new standard for Tamil horror cinema. 
+      It garnered appreciation for avoiding horror clichés and establishing a fresh perspective in the genre. 
+      Demonte Colony continues to be remembered as one of the best psychological horror films in Tamil cinema.
+    </p>
+
+</body>
+</html>    

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>96</h2>
+            <ul>
+                <li><span>Directed by:</span> C. Prem Kumar</li>
+                <li><span>Starring:</span> Vijay Sethupathi, Trisha Krishnan, Devadarshini, Janagaraj</li>
+                <li><span>Music by:</span> Govind Vasantha</li>
+                <li><span>Release date:</span> 2018</li>
+                <li><span>Language:</span> Tamil</li>
+                <li><span>Box office:</span> Blockbuster</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=96+Tamil+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.amazon.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="96.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        <strong>96</strong> is a nostalgic romantic drama that beautifully captures the emotions of unfulfilled love and longing. 
+        The film follows the journey of Ram (Vijay Sethupathi), a travel photographer, who attends his high school reunion and meets his childhood sweetheart, Janu (Trisha Krishnan), after 22 years. 
+        As they reconnect, memories of their innocent love from 1996 resurface, bringing bittersweet emotions and unresolved feelings. 
+        Through a night of heartfelt conversations, they relive their past while accepting the realities of their present lives. 
+        The narrative delicately explores the essence of first love and the impact it leaves on one’s life.
+    </p>
+
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        <strong>Vijay Sethupathi</strong> delivers a subtle yet powerful performance as Ram, embodying the character's emotional vulnerability and silent longing. 
+        <strong>Trisha Krishnan</strong> shines as Janu, gracefully portraying her character's internal conflicts and heartfelt emotions. 
+        The duo's exceptional chemistry brings authenticity to the narrative, making their portrayal of lost love deeply relatable. 
+        <strong>Devadarshini</strong> and other supporting actors add depth to the story, enhancing the emotional impact with realistic performances.
+    </p>
+
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        <strong>Directed by C. Prem Kumar</strong>, a former cinematographer, the movie marks his directorial debut with a beautifully crafted screenplay. 
+        Drawing inspiration from real-life experiences, Prem Kumar weaves a delicate narrative filled with nostalgia and emotional depth. 
+        The film's simplicity and realistic storytelling resonate with audiences of all ages. 
+        Produced by Nandagopal under Madras Enterprises, "96" was made on a modest budget but achieved remarkable success through its powerful storytelling and soulful music.
+    </p>
+
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Shot across scenic locations in Chennai, Kumbakonam, and Pondicherry, the film beautifully captures the nostalgia of the 90s. 
+        The cinematography by Mahendiran Jayaraju and N. Shanmuga Sundaram creates a visually poetic experience, enhancing the emotional journey of the characters. 
+        The flashback sequences are captured with warm, sepia-toned visuals, evoking memories of youthful innocence and first love.
+    </p>
+
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        "96" explores themes of nostalgia, love, and closure, delving into the emotions of unfulfilled love and the impact of memories. 
+        It portrays the complexities of relationships, showcasing the emotional conflicts of two people reconnecting after decades. 
+        The narrative resonates with audiences who have experienced the bittersweetness of first love and the melancholy of unspoken words. 
+        With its relatable storytelling and emotional depth, the film stands as a poignant reflection on love, time, and destiny.
+    </p>
+
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        <strong>Composed by Govind Vasantha</strong>, the soul-stirring music of "96" is one of its standout elements, enhancing the narrative's emotional impact. 
+        The soundtrack features iconic songs like <em>"Kaathalae Kaathalae"</em> and <em>"Anthaathi"</em>, beautifully capturing the essence of nostalgia and longing. 
+        The background score seamlessly weaves through the narrative, amplifying the emotional intensity of pivotal scenes. 
+        The poetic lyrics by Karthik Netha and Uma Devi perfectly complement the film's romantic and melancholic mood.
+    </p>
+
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        Released in <strong>2018</strong>, "96" was a critical and commercial success, receiving widespread acclaim for its sensitive portrayal of love and nostalgia. 
+        The film struck a chord with audiences of all generations, earning praise for its realistic storytelling, soulful music, and stellar performances. 
+        It was celebrated as one of the best romantic dramas in Tamil cinema, with critics appreciating its emotional depth and poetic narrative. 
+        The film's universal theme of unspoken love and unfulfilled dreams made it a timeless classic, cherished by audiences even today.
+    </p>
+</div>

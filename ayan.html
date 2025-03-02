@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - AYAN</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      
+      padding: 20px;
+     background-color: #000000d5;
+            color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+        background-color: #000000d5;
+        color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 400px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+    .trailer-button, .ott-button {
+    background-color: #eb4634;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    margin-top: 24px;
+    margin-right: 26px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.trailer-button:hover, .ott-button:hover {
+    background-color: #317f94;
+    transform: scale(1.11); /* Zoom in by 10% */
+}
+
+
+    
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content">
+    <!-- Movie Details Box with Image -->
+    <div class="details-box">
+      <div class="details-text">
+        <h2>AYAN</h2>
+        <ul>
+          <li><span>Directed by:</span> K. V. Anand</li>
+          <li><span>Written by:</span> K. V. Anand, Subha</li>
+          <li><span>Starring:</span> Suriya, Tamannaah Bhatia, Prabhu</li>
+          <li><span>Music by:</span> Harris Jayaraj</li>
+          <li><span>Release date:</span> 3 April 2009</li>
+          <li><span>Language:</span> Tamil</li>
+          <li><span>Box office:</span> ₹80 crore</li>
+          <li>
+            <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Ayan+Trailer', '_blank')">Watch Trailer on YouTube</button>
+            <button class="ott-button" onclick="window.open('https://www.primevideo.com/', '_blank')">Watch Movie on OTT</button>
+        </li>
+        
+        </ul>
+      </div>
+      <img src="ayan.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <!-- Sections for Plot, Cast, Production, Filming, and More -->
+    <h2 id="plot" class="section-title">Plot</h2>
+<p>
+  Ayan follows Deva, a daring and intelligent smuggler who navigates the dangerous underworld with his wit and agility. His loyalty to his mentor, Dass, is unwavering, considering him a father figure and the only moral compass in his criminal life. Complications arise when Deva falls in love with Yamuna, the sister of his rival, Chitti. Their romance blossoms amid chaos, presenting Deva with conflicting emotions as he struggles to balance his criminal life and personal desires. His life takes a dark turn when betrayal strikes from the person he least expected, leading to a tragic loss that changes him forever. Torn between vengeance and survival, Deva faces the ultimate test of loyalty and courage, challenging the very foundation of his existence. The narrative explores themes of friendship, betrayal, love, and redemption, all set against the high-stakes backdrop of international smuggling. The film is a roller-coaster of emotions with high-octane action sequences and intense drama, keeping the audience engaged until the climax.
+</p>
+
+<h2 id="cast" class="section-title">Cast</h2>
+<p>
+  Suriya shines as Deva, delivering a charismatic performance infused with action, humor, and emotion. His portrayal of a complex character caught between loyalty and love adds depth to the narrative. Tamannaah Bhatia as Yamuna brings charm and innocence, serving as Deva's emotional anchor amidst chaos. Their on-screen chemistry is vibrant and convincing. Prabhu as Dass delivers a powerful performance as Deva's mentor and father figure, bringing warmth and wisdom to his character. Akashdeep Saighal's portrayal of Chitti, the menacing antagonist, is chilling and impactful, adding tension to the story. Supporting actors, including Karunas as Deva's loyal friend and Jagan as his quirky sidekick, bring moments of humor and relief, balancing the film's intense drama. The well-rounded cast, with their commendable performances, enhances the emotional depth and realism of the movie.
+</p>
+<h2 id="Production" class="section-title">Production</h2>
+<p>
+  Ayan's production journey was marked by meticulous planning and a grand vision. The film was directed by K. V. Anand and produced by AVM Productions, ensuring high standards of storytelling and technical excellence. With a focus on high-octane action and an engaging narrative, the production team left no stone unturned to bring the script to life. 
+  International locations were meticulously selected, including Namibia's vast deserts, Malaysia's bustling urbanity, and Chennai's vibrant streets, all enhancing the movie's global appeal. Extensive research and attention to detail were applied to authentically portray the smuggling underworld. The film's stunts were choreographed by acclaimed action directors, delivering realistic and adrenaline-pumping sequences that were shot with precision. 
+  The production design was equally noteworthy, with intricate set designs, detailed costumes, and carefully planned logistics, ensuring seamless execution across multiple locations. The use of advanced filming techniques, combined with M. S. Prabhu's cinematography, brought a cinematic grandeur to the screen. 
+  Ayan's production quality set a new standard in Tamil cinema, showcasing the power of storytelling blended with technical brilliance. The collaborative effort of the entire crew transformed the director's vision into a visual masterpiece, making Ayan a landmark film in Indian cinema.
+</p>
+
+<h2 id="filming" class="section-title">Filming</h2>
+<p>
+  Ayan's cinematography is one of its most celebrated aspects. The movie was shot in exotic international locations, including the deserts of Namibia, the bustling streets of Malaysia, and the vibrant urban landscapes of Chennai. Each location is carefully chosen to enhance the narrative, giving the film a grand, international appeal. The high-octane action sequences were choreographed with precision, delivering adrenaline-pumping scenes, including daring chases, explosive fights, and breathtaking stunts. The use of slow-motion and aerial shots captures the intensity and dynamism of these sequences. The cinematographer, M. S. Prabhu, brilliantly captures the beauty and ruggedness of each locale, adding a visually appealing dimension to the storytelling. The meticulous attention to detail in set design, lighting, and color palette reflects the film's dark and intense theme, while the vibrant backdrops provide a stark contrast to the protagonist's morally grey world. The seamless blending of real locations and CGI enhances the film's visual grandeur, making it a cinematic treat.
+</p>
+
+<h2 id="themes" class="section-title">Themes and Influences</h2>
+<p>
+  Ayan explores a multitude of themes, including loyalty, friendship, love, and redemption. The narrative delves into the consequences of crime, portraying the thin line between good and evil. It questions moral ambiguity and the choices one makes under pressure. The bond between mentor and disciple is central to the storyline, showcasing Deva's loyalty to Dass and how it shapes his identity. The movie also reflects real-world smuggling dynamics, drawing inspiration from international crime syndicates and black market networks. Influences from action thrillers and underworld dramas are evident, blending them with emotional storytelling and Indian cultural nuances. The screenplay is layered with moral dilemmas, betrayal, and self-discovery, resonating with audiences on a deeper level.
+</p>
+
+<h2 id="music" class="section-title">Music</h2>
+<p>
+  Composed by Harris Jayaraj, the soundtrack of Ayan became an instant hit, contributing significantly to the film's success. Songs like "Vizhi Moodi" and "Pala Pala" topped music charts, resonating with listeners for their melodious tunes and poetic lyrics. The background score amplifies the film's emotional depth, seamlessly blending with the action sequences, romantic moments, and dramatic confrontations. The music's fusion of traditional Indian sounds with modern beats enhances the movie's global appeal. The vibrant dance sequences and soulful melodies complement the narrative, making the music an integral part of the storytelling.
+</p>
+
+<h2 id="release" class="section-title">Release</h2>
+<p>
+  Released on April 3, 2009, Ayan was a critical and commercial success, receiving acclaim for its engaging storyline, powerful performances, and technical brilliance. It became one of the highest-grossing Tamil films of its time, setting a benchmark for action thrillers in Indian cinema. The movie was praised for its tight screenplay, thrilling action sequences, and emotional depth. It appealed to audiences across all age groups, making it a blockbuster hit. Ayan's success cemented Suriya's status as a leading star in the Tamil film industry and elevated K. V. Anand's reputation as a visionary director. The film's international locations, gripping narrative, and chartbuster music contributed to its mass appeal, making it a milestone in Indian cinema.
+</p>
+
+  </div>
+
+  <script>
+    function toggleTrailer() {
+      var trailer = document.getElementById("trailer");
+      if (trailer.style.display === "none" || trailer.style.display === "") {
+        trailer.style.display = "block";
+      } else {
+        trailer.style.display = "none";
+      }
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+  <div class="details-box">
+      <div class="details-text">
+          <h2>KOTTUKALI</h2>
+          <ul>
+              <li><span>Directed by:</span> S. R. Prabhakaran</li>
+              <li><span>Starring:</span> Soori, Anna Ben, Yogi Babu</li>
+              <li><span>Music by:</span> Santhosh Narayanan</li>
+              <li><span>Release date:</span> 2024</li>
+              <li><span>Language:</span> Tamil</li>
+              <li><span>Box office:</span> Highly Anticipated</li>
+              <li>
+                  <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Kottukali+Tamil+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                  <button class="ott-button" onclick="window.open('https://www.netflix.com/', '_blank')">Watch Movie on OTT</button>
+              </li>
+          </ul>
+      </div>
+      <img src="kottukali.jpg" alt="Movie Poster" class="movie-image">
+  </div>
+
+  <h2 id="plot" class="section-title">Plot</h2>
+  <p>
+      Kottukali is a rural drama that revolves around friendship, love, and rivalry set in a rustic village backdrop. 
+      The story follows the life of two friends whose bond is tested by unforeseen conflicts and societal pressures. 
+      It beautifully portrays the emotional journey of friendship, loyalty, and the struggle to maintain relationships amidst chaos. 
+      With heart-touching moments and realistic storytelling, Kottukali is a powerful narrative about human emotions and social values.
+  </p>
+  
+  <h2 id="cast" class="section-title">Cast</h2>
+  <p>
+      Soori plays a lead role, showcasing his acting prowess with a balance of humor and emotion. 
+      Anna Ben makes her Tamil debut, bringing grace and charm to the narrative as the female lead. 
+      Yogi Babu provides comic relief, adding light-hearted moments amidst the intense drama. 
+      The supporting cast, including talented character actors, enhances the authenticity of the rural setting and story.
+  </p>
+  
+  <h2 id="production" class="section-title">Production</h2>
+  <p>
+      Directed by S. R. Prabhakaran, Kottukali is produced with an emphasis on realistic storytelling and emotional depth. 
+      The film captures the essence of rural life, focusing on human emotions and relationships. 
+      The director's vision of portraying the rustic village atmosphere with authenticity is executed brilliantly, making it a relatable and impactful drama.
+  </p>
+  
+  <h2 id="filming" class="section-title">Filming</h2>
+  <p>
+      Kottukali was filmed in picturesque rural locations of Tamil Nadu, capturing the beauty and simplicity of village life. 
+      The cinematography by cinematographer Mahesh Muthusamy enhances the rustic charm with vivid visuals and natural lighting. 
+      The authentic set designs, costumes, and realistic portrayal of village culture add to the immersive experience. 
+      The narrative's simplicity and emotional depth resonate with audiences seeking heartfelt storytelling.
+  </p>
+  
+  <h2 id="themes" class="section-title">Themes and Influences</h2>
+  <p>
+      Kottukali explores themes of friendship, love, loyalty, and societal conflicts. 
+      It delves into the complexities of human relationships and emotional struggles faced by individuals in rural communities. 
+      The narrative beautifully captures the essence of village life and the impact of societal norms on personal choices. 
+      Influenced by realistic dramas, Kottukali maintains a grounded and emotional tone throughout, making it a touching tale of human values.
+  </p>
+  
+  <h2 id="music" class="section-title">Music</h2>
+  <p>
+      Composed by Santhosh Narayanan, the music of Kottukali is soulful and deeply emotional, perfectly complementing the narrative. 
+      The background score enhances the emotional depth and rustic feel of the movie. 
+      The soundtrack features melodious folk tunes and heartfelt ballads that resonate with the film's rural setting. 
+      The songs are expected to be chartbusters, adding to the movie's emotional and cultural appeal.
+  </p>
+  
+  <h2 id="release" class="section-title">Release</h2>
+  <p>
+      Scheduled for release in 2024, Kottukali is eagerly awaited for its emotional storytelling and powerful performances. 
+      The trailer has received positive feedback for its realistic portrayal of village life and relatable characters. 
+      With its heartwarming narrative and strong emotional core, Kottukali is expected to be a commercial success. 
+      It is anticipated to resonate with audiences looking for meaningful and emotional cinema.
+  </p>
+</div>
+

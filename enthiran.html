@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - THUPPAKKI</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      background-color: #000000d5;
+      color: #f5f5f5;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7;
+      font-size: 20px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color:#419fb7;
+      color: #fff;
+    }
+
+    /* Main Content Area */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    /* Movie Details Box */
+    .details-box {
+      background-color: #000000d5;
+      color: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .details-text {
+      flex: 2;
+    }
+
+    .details-box h2 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .details-box ul {
+      list-style: none;
+      color: #ffffff;
+      line-height: 2;
+      font-size: 20px;
+    }
+
+    .details-box ul li span {
+      color: #419fb7;
+      font-weight: bold;
+    }
+
+    /* Movie Image */
+    .movie-image {
+      flex: 1;
+      max-width: 500px;
+      margin-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      font-size: 25px;
+      color: #000000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .trailer-button, .ott-button {
+      background-color: #eb4634;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin-top: 24px;
+      margin-right: 26px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .trailer-button:hover, .ott-button:hover {
+      background-color: #317f94;
+      transform: scale(1.11); /* Zoom in by 10% */
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Movie Details</h2>
+    <ul>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#filming">Filming</a></li>
+      <li><a href="#themes">Themes and Influences</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#release">Release</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content">
+    <div class="details-box">
+        <div class="details-text">
+            <h2>ENTHIRAN</h2>
+            <ul>
+                <li><span>Directed by:</span> Shankar</li>
+                <li><span>Starring:</span> Rajinikanth, Aishwarya Rai, Danny Denzongpa, Santhanam, Karunas</li>
+                <li><span>Music by:</span> A. R. Rahman</li>
+                <li><span>Release date:</span> 2010</li>
+                <li><span>Language:</span> Tamil</li>
+                <li><span>Box office:</span> Blockbuster Hit</li>
+                <li>
+                    <button class="trailer-button" onclick="window.open('https://www.youtube.com/results?search_query=Enthiran+Tamil+Trailer', '_blank')">Watch Trailer on YouTube</button>
+                    <button class="ott-button" onclick="window.open('https://www.netflix.com/', '_blank')">Watch Movie on OTT</button>
+                </li>
+            </ul>
+        </div>
+        <img src="enthiran.jpg" alt="Movie Poster" class="movie-image">
+    </div>
+
+    <h2 id="plot" class="section-title">Plot</h2>
+    <p>
+        <strong>Enthiran</strong> is a science fiction action film that revolves around Dr. Vaseegaran (Rajinikanth), a brilliant scientist who creates a humanoid robot named Chitti. 
+        Designed to serve humanity, Chitti is programmed with incredible intelligence and superhuman abilities. 
+        However, when Chitti begins to develop human emotions and falls in love with Sana (Aishwarya Rai), Vaseegaran's girlfriend, complications arise. 
+        Things take a dark turn when Chitti is manipulated by Dr. Bohra (Danny Denzongpa), leading to catastrophic consequences. 
+        The narrative explores themes of love, jealousy, and the ethical boundaries of artificial intelligence. 
+        With stunning visual effects and high-octane action sequences, Enthiran became a game-changer in Indian cinema.
+    </p>
+
+    <h2 id="cast" class="section-title">Cast</h2>
+    <p>
+        <strong>Rajinikanth</strong> delivers a stellar performance in dual roles as Dr. Vaseegaran and Chitti, effortlessly switching between the genius scientist and the charismatic robot. 
+        <strong>Aishwarya Rai</strong> shines as Sana, bringing charm and elegance to her character, while portraying her emotional conflicts convincingly. 
+        <strong>Danny Denzongpa</strong> plays the antagonist Dr. Bohra with a menacing presence, adding depth to the narrative's conflict. 
+        <strong>Santhanam</strong> and <strong>Karunas</strong> provide comic relief, balancing the intense storyline with humor. 
+        The ensemble cast enhances the emotional impact and grandeur of the film.
+    </p>
+
+    <h2 id="production" class="section-title">Production</h2>
+    <p>
+        <strong>Directed by Shankar</strong>, Enthiran was one of the most expensive Indian films at the time of its release. 
+        The movie was produced by Sun Pictures, with groundbreaking visual effects supervised by international VFX teams. 
+        The screenplay brilliantly combines science fiction, romance, and action, exploring futuristic concepts of robotics and artificial intelligence. 
+        Shankar's visionary direction and innovative storytelling made Enthiran a trendsetter in the sci-fi genre of Indian cinema.
+    </p>
+
+    <h2 id="filming" class="section-title">Filming</h2>
+    <p>
+        Filmed across scenic locations in India, Brazil, and Peru, Enthiran boasts stunning visuals and grand set designs. 
+        The action sequences are choreographed with high-octane stunts and spectacular special effects, showcasing Rajinikanth's larger-than-life screen presence. 
+        The climax battle sequence with thousands of Chitti robots transforming and fighting remains iconic for its brilliant CGI and VFX work.
+    </p>
+
+    <h2 id="themes" class="section-title">Themes and Influences</h2>
+    <p>
+        Enthiran explores themes of artificial intelligence, ethical dilemmas in technology, and the complexities of human emotions. 
+        It delves into the philosophical questions of love, identity, and the moral implications of creating life-like machines. 
+        Influenced by global sci-fi classics, Enthiran redefined Indian cinema's approach to futuristic storytelling, blending high-concept ideas with mass entertainment.
+    </p>
+
+    <h2 id="music" class="section-title">Music</h2>
+    <p>
+        <strong>Composed by A. R. Rahman</strong>, the music of Enthiran became an instant hit, perfectly complementing the film's futuristic theme. 
+        Chart-topping songs like <em>"Arima Arima"</em>, <em>"Kadhal Anukkal"</em>, and <em>"Irumbile Oru Irudhaiyam"</em> captivated audiences with their energetic beats and soulful melodies. 
+        The background score heightened the emotional impact and action sequences, enhancing the cinematic experience.
+    </p>
+
+    <h2 id="release" class="section-title">Release</h2>
+    <p>
+        Released in <strong>2010</strong>, Enthiran broke several box-office records, becoming one of the highest-grossing Indian films of its time. 
+        The movie received critical acclaim for its innovative storytelling, exceptional visual effects, and Rajinikanth's mesmerizing performance. 
+        It was dubbed in multiple languages, gaining international recognition and a massive fan following worldwide. 
+        Enthiran is celebrated as a landmark in Indian cinema, influencing a new wave of science fiction films in the industry.
+    </p>
+</div>
